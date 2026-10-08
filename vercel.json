@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/simstd", "destination": "/iphone18pro/simstd-en-live-vs-aplus-compare.html" },
+    { "source": "/hsvworld", "destination": "/hsvworld/index-en-live-vs-aplus-compare.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ]
+}

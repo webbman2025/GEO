@@ -1,0 +1,100 @@
+/*
+ * Live vs A+ compare iframes.
+ * Content well matches worldplan-geo-cms (.wp-inner) and geo-iphone-full (.geo-content):
+ * — desktop: 88% centered, max 1600px
+ * — mobile (≤768): 100% width + 16px horizontal inset (plans/global/index-en.html)
+ */
+
+html.geo-compare-preview {
+  overflow-x: hidden;
+}
+
+html.geo-compare-preview body {
+  overflow-x: hidden;
+  max-width: 100%;
+  background: #ffffff;
+}
+
+html.geo-compare-preview div.slider:has(#topslider1) {
+  display: none !important;
+}
+
+html.geo-compare-preview .geo-shell,
+html.geo-compare-preview .page-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .geo-shell .geo-content,
+html.geo-compare-preview .page-wrap .geo-content {
+  width: 88% !important;
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  html.geo-compare-preview .geo-shell .geo-content,
+  html.geo-compare-preview .page-wrap .geo-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+html.geo-compare-preview .fullmenuframe,
+html.geo-compare-preview .languageframe,
+html.geo-compare-preview .languageclosebtnframe,
+html.geo-compare-preview .pmenubannercontainer,
+html.geo-compare-preview table.pagetablewidth {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .languageframe,
+html.geo-compare-preview .fullmenuframe {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+html.geo-compare-preview .geo-hero {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html.geo-compare-preview .geo-plan-segment-wrap,
+html.geo-compare-preview .geo-product-nav,
+html.geo-compare-preview .wp-table-wrap,
+html.geo-compare-preview .wp-table-stage {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .geo-title-row h1.geo-h1-oneline {
+  white-space: normal;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+}
+
+html.geo-compare-preview .geo-bluf-lead,
+html.geo-compare-preview .ipofferpoint {
+  font-size: 0.95rem;
+}
+
+html.geo-compare-preview body.geo-page .hkfooterpagewrap {
+  width: 100% !important;
+  max-width: 100% !important;
+}

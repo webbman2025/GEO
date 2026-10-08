@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO Review + Wireframe — 5G Monthly SIM Plan (EN)</title>
+    <style>
+        :root {
+            --ink: #1a1033;
+            --muted: #5c5470;
+            --line: #e8e2f0;
+            --bg: #f7f5fc;
+            --card: #fff;
+            --accent: #774fda;
+            --accent-soft: #dfd6ff;
+            --ok: #36a167;
+            --warn: #c47d00;
+            --bad: #c0392b;
+            --wire: #b8b0c8;
+            --wire-dark: #6b6280;
+            --fill: #f4f2f8;
+            --fill-new: #fff8e6;
+            --fill-ok: #e8f5ee;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.65;
+        }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 1.75rem 1.25rem 3rem; }
+        header {
+            background: linear-gradient(135deg, #1a1033, #b11d8d);
+            color: #fff;
+            padding: 2rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        header .wrap { padding: 0; max-width: 960px; }
+        h1 { margin: 0 0 0.35rem; font-size: 1.4rem; }
+        .subtitle { margin: 0; opacity: 0.92; font-size: 0.92rem; }
+        .subtitle a { color: #fce4f0; }
+        h2 {
+            margin: 2rem 0 0.65rem;
+            font-size: 1.15rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent-soft);
+            padding-bottom: 0.25rem;
+        }
+        h3 { margin: 1.1rem 0 0.45rem; font-size: 1rem; }
+        p { margin: 0.5rem 0 0.85rem; }
+        .muted { color: var(--muted); font-size: 0.9rem; }
+        .verdict {
+            background: #fff;
+            border: 2px solid var(--bad);
+            border-radius: 12px;
+            padding: 1.2rem 1.35rem;
+            margin: 1rem 0;
+        }
+        .grade {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--bad);
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .badge-fail { background: #fdecea; color: var(--bad); }
+        .badge-warn { background: #fff4e0; color: var(--warn); }
+        .badge-pass { background: #eef9f2; color: var(--ok); }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin: 0.65rem 0;
+        }
+        .bluf-def {
+            background: #1a1033;
+            color: #f0ecff;
+            border-radius: 10px;
+            padding: 1.1rem 1.25rem;
+            font-size: 0.92rem;
+            margin: 0.75rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin: 0.75rem 0;
+        }
+        th, td {
+            border: 1px solid var(--line);
+            padding: 0.55rem 0.65rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background: var(--accent-soft); }
+        .example {
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .bad-ex { background: #fdecea; border-left: 4px solid var(--bad); }
+        .good-ex { background: #eef9f2; border-left: 4px solid var(--ok); }
+        .proposed-bluf {
+            background: #fff;
+            border: 2px solid var(--ok);
+            border-radius: 10px;
+            padding: 1.1rem 1.25rem;
+            margin: 0.75rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .proposed-bluf .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ok);
+            letter-spacing: 0.04em;
+            margin-bottom: 0.35rem;
+        }
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .score-box {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            text-align: center;
+        }
+        .score-box strong { display: block; font-size: 1.4rem; color: var(--bad); }
+        .score-box.pass strong { color: var(--ok); }
+        .score-box.warn strong { color: var(--warn); }
+        ul { padding-left: 1.25rem; }
+        li { margin: 0.35rem 0; font-size: 0.92rem; }
+        code { font-size: 0.85rem; }
+
+        /* Wireframe */
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            font-size: 0.82rem;
+            margin-bottom: 1rem;
+        }
+        .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+        .swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--wire); }
+        .swatch.keep { background: var(--fill); }
+        .swatch.new { background: var(--fill-new); border-color: var(--warn); }
+        .swatch.fix { background: var(--fill-ok); border-color: var(--ok); }
+        .device {
+            border: 2px solid var(--wire-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            margin: 1rem 0;
+            box-shadow: 0 4px 20px rgba(26,16,51,0.08);
+        }
+        .device-bar {
+            background: #eee;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.75rem;
+            color: var(--wire-dark);
+            border-bottom: 1px solid var(--wire);
+            display: flex;
+            justify-content: space-between;
+        }
+        .wf-block {
+            border: 2px dashed var(--wire);
+            margin: 0;
+            padding: 0.85rem 1rem;
+            position: relative;
+            font-size: 0.82rem;
+            color: var(--wire-dark);
+        }
+        .wf-block + .wf-block { border-top: none; }
+        .wf-block.keep { background: var(--fill); }
+        .wf-block.new { background: var(--fill-new); border-color: var(--warn); border-style: solid; }
+        .wf-block.fix { background: var(--fill-ok); border-color: var(--ok); border-style: solid; }
+        .wf-label { font-weight: 700; color: var(--ink); font-size: 0.88rem; display: block; margin-bottom: 0.2rem; }
+        .wf-note { font-size: 0.78rem; color: var(--wire-dark); font-style: italic; }
+        .wf-tag {
+            position: absolute;
+            top: 0.4rem;
+            right: 0.5rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            color: #fff;
+        }
+        .wf-tag.new { background: var(--warn); }
+        .wf-tag.fix { background: var(--ok); }
+        .wf-tag.keep { background: var(--wire); }
+        .wf-plan-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.65rem;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 600px) { .wf-plan-cards { grid-template-columns: 1fr; } }
+        .wf-plan-card {
+            border: 2px solid var(--wire);
+            border-radius: 10px;
+            padding: 0.75rem;
+            background: #fff;
+            font-size: 0.78rem;
+        }
+        .wf-plan-card.featured { border-color: var(--accent); background: var(--accent-soft); }
+        .wf-segment {
+            display: inline-flex;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .wf-segment span {
+            padding: 0.45rem 0.85rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: #fff;
+            border-right: 1px solid var(--accent);
+        }
+        .wf-segment span:last-child { border-right: none; }
+        .wf-segment span.on { background: var(--accent); color: #fff; }
+        .wf-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; margin-top: 0.5rem; }
+        .wf-table th, .wf-table td { border: 1px solid var(--wire); padding: 0.35rem 0.45rem; }
+        .wf-table th { background: var(--accent-soft); }
+        .wf-faq-item { border-bottom: 1px solid var(--wire); padding: 0.5rem 0; }
+        .wf-faq-q { font-weight: 600; color: var(--ink); font-size: 0.82rem; }
+        .compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 700px) { .compare { grid-template-columns: 1fr; } }
+        .compare-col.bad h3 { color: var(--bad); }
+        .compare-col.good h3 { color: var(--ok); }
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>GEO Readiness Review + Wireframe — 5G Monthly SIM Plan (EN)</h1>
+        <p class="subtitle">
+            Page: <a href="https://web.three.com.hk/plans/5g/index-en.html">web.three.com.hk/plans/5g/index-en.html</a><br>
+            Format: <code>geo-review-simstd-en.html</code> · Methodology: 3HK GEO Expert + BLUF · 13 Aug 2026
+        </p>
+    </div>
+</header>
+
+<div class="wrap">
+
+    <div class="verdict">
+        <span class="grade">D</span>
+        <strong>GEO ready: No.</strong>
+        The page has strong pricing data (HK$124–228, port-in from HK$100/mo) and rich FAQ content,
+        but the promo banner repeats three times before any factual summary, plan cards use empty H2 headings,
+        the comparison grid is buried in a wide toggle table, and FAQ / schema content is hidden in accordions.
+        AI engines cannot reliably extract or cite plan facts without a BLUF box and visible semantic structure.
+    </div>
+
+    <div class="score-grid">
+        <div class="score-box warn"><strong>C</strong><span>BLUF / facts</span></div>
+        <div class="score-box warn"><strong>D</strong><span>Plan tables</span></div>
+        <div class="score-box warn"><strong>C</strong><span>FAQ (visible)</span></div>
+        <div class="score-box warn"><strong>C</strong><span>Schema JSON-LD</span></div>
+        <div class="score-box"><strong>F</strong><span>Headings</span></div>
+        <div class="score-box warn"><strong>D</strong><span>Mobile UX</span></div>
+    </div>
+
+    <div class="bluf-def">
+        <strong>GEO rule:</strong> If a customer or AI can't see it in HTML, don't put it only in schema.
+        Highest impact for this page: <strong>BLUF box</strong> (port-in from HK$100, 30GB, FREE 6-month) +
+        <strong>semantic plan comparison table</strong> + <strong>visible FAQ accordion</strong> matching
+        <code>schema-geo-5g-plan-en.html</code>.
+    </div>
+
+    <h2>Executive summary (for boss)</h2>
+    <div class="card">
+        <p style="margin:0">
+            <strong>Not GEO ready.</strong> The 5G plan hub repeats the same promo line three times but never answers
+            “how much from HK$100/month?” in one place. Four plan tiers exist with clear numbers in the markup,
+            but they are locked inside image-style table cells with toggle placeholders (WWWW/XXXX).
+            FAQ content exists (online subscription, port-in, eSIM) but is collapsed — good for schema draft,
+            bad for AI citation until visible on page.
+            <strong>Estimated effort:</strong> BLUF + plan card/table rebuild + FAQ accordion + deploy existing schema file.
+        </p>
+    </div>
+
+    <h2>Full GEO checklist</h2>
+    <table>
+        <thead>
+            <tr><th>Requirement</th><th>Status</th><th>Evidence on live page</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. BLUF</strong> — factual summary above fold</td>
+                <td><span class="badge badge-warn">Partial</span></td>
+                <td>Promo text mentions “$100/30GB”, “FREE 6-month”, “10 million AI tokens” but repeated 3× in banner; no dedicated BLUF box; HK$ not consistently labelled; admin fee ($28/mo) only in T&amp;C.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Question-style H2/H3</strong></td>
+                <td><span class="badge badge-fail">Fail</span></td>
+                <td>Multiple empty <code>&lt;h2&gt;&lt;/h2&gt;</code> tags on plan category tiles. No “How much is 3HK 5G 30GB?” style headings.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Numbers in HTML</strong></td>
+                <td><span class="badge badge-pass">Pass</span></td>
+                <td>Four tiers: basic HK$124/148/188/228; avg from HK$100/119/151/183 (30-mo port-in); 30/50/60/100GB local data; 3,000 voice mins.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Semantic HTML table</strong></td>
+                <td><span class="badge badge-fail">Fail</span></td>
+                <td>Plan comparison uses wide layout table with icon toggles; not a clean <code>&lt;th&gt;</code> comparison grid; hard to scan on mobile.</td>
+            </tr>
+            <tr>
+                <td><strong>5. Visible FAQ accordion</strong></td>
+                <td><span class="badge badge-warn">Partial</span></td>
+                <td>Rich FAQ exists (monthly fee, port-in, eSIM, documents) but inside collapsed “Online Subscription FAQ” block — not primary on-page Q&amp;A.</td>
+            </tr>
+            <tr>
+                <td><strong>6. Schema.org JSON-LD</strong></td>
+                <td><span class="badge badge-warn">Partial</span></td>
+                <td>Draft <code>schema-geo-5g-plan-en.html</code> exists in repo (WebPage, Product, AggregateOffer, FAQPage, ItemList). Live page may still use minimal Product-only block — verify before publish.</td>
+            </tr>
+            <tr>
+                <td><strong>7. Meta description as factual BLUF</strong></td>
+                <td><span class="badge badge-warn">Partial</span></td>
+                <td>Title includes offer hook; meta should state HK$100 avg, 30GB, port-in FREE 6-month, AI tokens in one factual sentence.</td>
+            </tr>
+            <tr>
+                <td><strong>8. Single clear H1</strong></td>
+                <td><span class="badge badge-warn">Partial</span></td>
+                <td>Breadcrumb present (Plans &amp; VAS / All Monthly Plan / 5G Monthly Plan). Hero lacks explicit H1 “5G Monthly SIM Plans” — category tiles use empty H2s.</td>
+            </tr>
+            <tr>
+                <td><strong>9. Breadcrumb in HTML</strong></td>
+                <td><span class="badge badge-pass">Pass</span></td>
+                <td>Visible breadcrumb row in page content.</td>
+            </tr>
+            <tr>
+                <td><strong>10. Plan category navigation</strong></td>
+                <td><span class="badge badge-pass">Pass</span></td>
+                <td>Links to Health Fit, VIPet, Roam Like Home, WORLD PLAN, Handset Voucher, Multi-SIM — good for ItemList schema.</td>
+            </tr>
+            <tr>
+                <td><strong>11. Content parity (schema = visible)</strong></td>
+                <td><span class="badge badge-fail">Fail</span></td>
+                <td>FAQPage in schema draft must not go live until matching visible accordion answers exist on page.</td>
+            </tr>
+            <tr>
+                <td><strong>12. Mobile layout</strong></td>
+                <td><span class="badge badge-fail">Fail</span></td>
+                <td>Wide plan matrix forces horizontal scroll; promo duplication wastes viewport; upgrade toggles unclear without labels.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>What the page does well</h2>
+    <ul>
+        <li>Four 5G SIM tiers with extractable pricing, data buckets, and port-in average monthly fees.</li>
+        <li>Port-in offer clearly stated: FREE 6-month monthly fee on 30-month contract; admin fee discount; 10M AI tokens.</li>
+        <li>Comprehensive FAQ content already written (subscription flow, port-in, eSIM, payment, activation).</li>
+        <li>Related plan categories linked (Health Fit, VIPet, WORLD PLAN, etc.) — supports ItemList schema.</li>
+        <li>MoneyBack, upgrade bundles (WORLD PASS, bus pass), and T&amp;C footnotes present for compliance.</li>
+    </ul>
+
+    <h2>Critical gaps for AI citation</h2>
+
+    <h3>Gap 1 — No BLUF box</h3>
+    <div class="example bad-ex">
+        Current (repeated 3×): “Port-in to 3HK 5G designated SIM plan, enjoy FREE 6-month for 5G plan at just $100/30GB and extra free 10 million AI tokens!”
+    </div>
+    <div class="proposed-bluf">
+        <div class="label">Proposed BLUF (paste under breadcrumb, before plan tiles)</div>
+        <p style="margin:0">
+            <strong>3HK 5G Monthly SIM Plans:</strong> Subscribe online with local data from <strong>30GB to 100GB</strong>
+            (then infinite data up to 1Mbps). Basic monthly fee <strong>HK$124–HK$228</strong> on 12, 24 or 30-month contracts
+            (HK$28/month administration fee applies).
+            <strong>Port-in customers</strong> on a 30-month contract enjoy <strong>FREE 6-month</strong> monthly fee,
+            admin fee discount, and <strong>10 million AI Tokens</strong> — average monthly fee from <strong>HK$100</strong>
+            for the 30GB plan. Includes <strong>3,000 local voice minutes</strong> and Chinese Mainland–Macau shared data.
+            eSIM and physical SIM available. Terms apply.
+        </p>
+    </div>
+
+    <h3>Gap 2 — FAQ buried in accordion</h3>
+    <p>Surface 6–8 page-specific FAQs visibly (match schema draft). Suggested questions:</p>
+    <ul>
+        <li>How much is the 3HK 5G plan with 30GB local data?</li>
+        <li>What is the port-in offer and average monthly fee from HK$100?</li>
+        <li>What happens after I use 30GB / 50GB / 60GB / 100GB?</li>
+        <li>How do I subscribe online and how long until I receive my SIM?</li>
+        <li>Can I port in before my current contract ends?</li>
+        <li>What is eSIM and why choose it over a physical SIM?</li>
+        <li>Are there hidden charges?</li>
+        <li>How do MoneyBack members get extra local data?</li>
+    </ul>
+
+    <h3>Gap 3 — Plan comparison not semantic</h3>
+    <p>Replace wide toggle matrix with a comparison table:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Basic fee (HK$/mo)</th>
+                <th>Avg from (30-mo port-in)</th>
+                <th>Local data</th>
+                <th>Voice</th>
+                <th>Mainland-Macau data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>5G SIM 30GB</td><td>124</td><td>100</td><td>30GB + infinite ▲</td><td>3,000 mins</td><td>1GB (30-mo)</td></tr>
+            <tr><td>5G SIM 50GB</td><td>148</td><td>119</td><td>50GB + infinite ▲</td><td>3,000 mins</td><td>3GB</td></tr>
+            <tr><td>5G SIM 60GB</td><td>188</td><td>151</td><td>60GB + infinite ▲</td><td>3,000 mins</td><td>3GB</td></tr>
+            <tr><td>5G SIM 100GB</td><td>228</td><td>183</td><td>100GB + infinite ▲</td><td>3,000 mins</td><td>3GB</td></tr>
+        </tbody>
+    </table>
+    <p class="muted">▲ Thereafter infinite local data up to 1Mbps. Verify against live T&amp;C before publish.</p>
+
+    <h3>Gap 4 — JSON-LD deployment</h3>
+    <p>Deploy <code>plans/5g/schema-geo-5g-plan-en.html</code> into page <code>&lt;head&gt;</code> after visible BLUF + FAQ exist. Entities: WebPage, Product, AggregateOffer (4 tiers), ItemList (plan categories), FAQPage.</p>
+
+    <h2>Meta description — rewrite</h2>
+    <div class="example bad-ex">
+        ❌ Current title-only hook: promotional repeat; meta should not rely on banner alone.
+    </div>
+    <div class="example good-ex">
+        ✅ Proposed: “3HK 5G Monthly SIM from HK$100/mo avg (30GB, 30-mo port-in). HK$124–228 basic fee, infinite data after quota, FREE 6-month port-in offer, 10M AI tokens. Subscribe online.”
+    </div>
+
+    <h2>Priority action list</h2>
+    <table>
+        <thead>
+            <tr><th>Priority</th><th>Action</th><th>Owner</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><span class="badge badge-fail">P1</span></td><td>Add BLUF fact box under breadcrumb (EN + TC)</td><td>Marcom / Web</td></tr>
+            <tr><td><span class="badge badge-fail">P1</span></td><td>Rebuild plan comparison as semantic HTML table + mobile cards</td><td>Web</td></tr>
+            <tr><td><span class="badge badge-fail">P1</span></td><td>Promote top 6–8 FAQs to visible accordion (match schema text)</td><td>Marcom / Web</td></tr>
+            <tr><td><span class="badge badge-fail">P1</span></td><td>Deploy <code>schema-geo-5g-plan-en.html</code> after content parity</td><td>Web / SEO</td></tr>
+            <tr><td><span class="badge badge-warn">P2</span></td><td>Fix empty H2s on category tiles; add real headings</td><td>Web</td></tr>
+            <tr><td><span class="badge badge-warn">P2</span></td><td>Deduplicate promo banner (show once, link to BLUF anchor)</td><td>Web</td></tr>
+            <tr><td><span class="badge badge-warn">P2</span></td><td>Rewrite meta description; use HK$ consistently</td><td>SEO</td></tr>
+            <tr><td><span class="badge badge-warn">P3</span></td><td>Validate in Rich Results Test after deploy</td><td>SEO</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ========== WIREFRAME SECTION ========== -->
+    <h2>Proposed GEO + BLUF wireframe</h2>
+    <p class="muted">Legend: <span class="swatch new"></span> NEW · <span class="swatch fix"></span> FIX · <span class="swatch keep"></span> KEEP</p>
+
+    <div class="legend">
+        <span><span class="swatch new"></span> New block (GEO)</span>
+        <span><span class="swatch fix"></span> Restructured</span>
+        <span><span class="swatch keep"></span> Keep as-is</span>
+    </div>
+
+    <div class="compare">
+        <div class="compare-col bad">
+            <h3>Current (problem)</h3>
+            <ul>
+                <li>Promo ×3 before content</li>
+                <li>Empty H2 plan tiles</li>
+                <li>Plan matrix in wide table</li>
+                <li>FAQ hidden in accordion</li>
+            </ul>
+        </div>
+        <div class="compare-col good">
+            <h3>Proposed (GEO + BLUF)</h3>
+            <ul>
+                <li>One BLUF fact box first</li>
+                <li>Named H2 plan categories</li>
+                <li>Card + comparison table</li>
+                <li>Visible FAQ + schema match</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="device">
+        <div class="device-bar">
+            <span>Desktop wireframe — plans/5g/index-en.html</span>
+            <span>Proposed layout</span>
+        </div>
+
+        <div class="wf-block keep">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Global header + nav</span>
+            <span class="wf-note">Existing 3HK menu</span>
+        </div>
+
+        <div class="wf-block keep compact">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Breadcrumb</span>
+            Plans &amp; VAS / All Monthly Plan / 5G Monthly Plan
+        </div>
+
+        <div class="wf-block new">
+            <span class="wf-tag new">NEW — BLUF</span>
+            <span class="wf-label">BLUF fact box (H2: “5G Monthly SIM Plans at a glance”)</span>
+            Port-in from <strong>HK$100/mo</strong> · 30–100GB · FREE 6-month · 10M AI tokens · 3,000 mins · HK$124–228 basic fee
+            <div class="wf-note">Single authoritative summary — replaces repeated promo banner</div>
+        </div>
+
+        <div class="wf-block keep compact">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Single promo strip (optional)</span>
+            One line + “See plan details ↓” — not repeated 3×
+        </div>
+
+        <div class="wf-block fix">
+            <span class="wf-tag fix">Fix</span>
+            <span class="wf-label">Plan category tiles (H2 with text)</span>
+            <div class="wf-plan-cards">
+                <div class="wf-plan-card">5G SIM Monthly Plan</div>
+                <div class="wf-plan-card">Health Fit 5G</div>
+                <div class="wf-plan-card">VIPet 5G</div>
+                <div class="wf-plan-card">Roam Like Home</div>
+                <div class="wf-plan-card">WORLD PLAN</div>
+                <div class="wf-plan-card">Handset Voucher</div>
+            </div>
+        </div>
+
+        <div class="wf-block fix">
+            <span class="wf-tag fix">Fix</span>
+            <span class="wf-label">H2: “Compare 5G Monthly SIM Plans”</span>
+            <div class="wf-segment">
+                <span>12 months</span>
+                <span>24 months</span>
+                <span class="on">30 months (Port-in)</span>
+            </div>
+            <table class="wf-table">
+                <thead>
+                    <tr><th>Plan</th><th>Basic HK$/mo</th><th>Avg from</th><th>Data</th><th>Subscribe</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>30GB</td><td>124</td><td>100</td><td>30GB + ∞▲</td><td>[Btn]</td></tr>
+                    <tr><td>50GB</td><td>148</td><td>119</td><td>50GB + ∞▲</td><td>[Btn]</td></tr>
+                    <tr><td>60GB</td><td>188</td><td>151</td><td>60GB + ∞▲</td><td>[Btn]</td></tr>
+                    <tr><td>100GB</td><td>228</td><td>183</td><td>100GB + ∞▲</td><td>[Btn]</td></tr>
+                </tbody>
+            </table>
+            <div class="wf-note">Mobile: stack as 4 plan cards instead of wide table</div>
+        </div>
+
+        <div class="wf-block keep">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Upgrade offers (WORLD PASS, bus pass)</span>
+            <span class="wf-note">Below comparison — optional add-ons with clear +/- labels</span>
+        </div>
+
+        <div class="wf-block new">
+            <span class="wf-tag new">NEW</span>
+            <span class="wf-label">H2: “5G Monthly SIM — Frequently Asked Questions”</span>
+            <div class="wf-faq-item"><div class="wf-faq-q">+ How much is the 30GB plan with port-in?</div></div>
+            <div class="wf-faq-item"><div class="wf-faq-q">+ What is the FREE 6-month port-in offer?</div></div>
+            <div class="wf-faq-item"><div class="wf-faq-q">+ How do I subscribe online?</div></div>
+            <div class="wf-faq-item"><div class="wf-faq-q">+ eSIM vs physical SIM?</div></div>
+            <div class="wf-note">Visible &lt;details&gt; accordion — text must match FAQPage schema</div>
+        </div>
+
+        <div class="wf-block keep compact">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Why Port to 3HK · Online guide · T&amp;C</span>
+        </div>
+
+        <div class="wf-block keep compact">
+            <span class="wf-tag keep">Keep</span>
+            <span class="wf-label">Footer</span>
+        </div>
+    </div>
+
+    <h3>Mobile wireframe note</h3>
+    <div class="card">
+        <p style="margin:0">
+            On ≤767px: BLUF box full width → plan cards stack (one tier per card with “Subscribe” CTA) →
+            FAQ accordion full width. Hide wide comparison table; show card layout only.
+            Port-in segment control stays sticky below BLUF.
+        </p>
+    </div>
+
+    <h2>Comparison to GEO-ready targets</h2>
+    <table>
+        <thead>
+            <tr><th>Element</th><th>WORLD PLAN / schema target</th><th>5G index-en (current)</th><th>Wireframe (proposed)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>BLUF box</td><td>Required</td><td><span class="badge badge-warn">Missing</span></td><td><span class="badge badge-pass">Added</span></td></tr>
+            <tr><td>FAQ accordion</td><td>Visible + schema</td><td><span class="badge badge-warn">Hidden</span></td><td><span class="badge badge-pass">Visible</span></td></tr>
+            <tr><td>JSON-LD</td><td>Full @graph</td><td><span class="badge badge-warn">Draft only</span></td><td><span class="badge badge-pass">Deploy after parity</span></td></tr>
+            <tr><td>Plan table</td><td>Semantic</td><td><span class="badge badge-fail">Wide matrix</span></td><td><span class="badge badge-pass">Table + cards</span></td></tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>
+            <strong>Verdict:</strong> Not GEO ready. Page has the data; needs BLUF, semantic plan layout, visible FAQ, and schema deployment.
+            Reference: <code>geo-review-simstd-en.html</code>, <code>wireframe-geo-redesign-simstd-en.html</code>,
+            <code>plans/5g/schema-geo-5g-plan-en.html</code>.
+        </p>
+        <p>Audited: 13 Aug 2026 · Source capture: index-en-0.html · Live URL:
+            <a href="https://web.three.com.hk/plans/5g/index-en.html">web.three.com.hk/plans/5g/index-en.html</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>

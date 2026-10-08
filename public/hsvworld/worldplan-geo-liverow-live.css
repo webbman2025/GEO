@@ -1,0 +1,247 @@
+/* Liverow table uses CMS look (worldplan-geo-cms.css .wp-table).
+   Content stays on worldplan-geo-liverow-en.html. Do not change CMS or livegrid. */
+
+.wp-page .wp-table.wp-liverow sup,
+.wp-page .wp-sim__title sup,
+.wp-page .wp-mb__earn sup {
+  font-size: 70%;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan,
+.wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan * {
+  background: #f8f0ff !important;
+  color: #111 !important;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 130%;
+  border-color: #dbdbdb;
+  text-align: center;
+}
+
+.wp-liverow .wp-liverow__gb {
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.wp-liverow td.wp-liverow__fee {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.wp-liverow .wp-liverow__fee,
+.wp-liverow .wp-liverow__price,
+.wp-liverow .wp-liverow__price .wp-liverow__hk {
+  color: #774fda;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.wp-liverow .wp-liverow__price {
+  display: inline;
+}
+
+.wp-liverow .wp-liverow__avg {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.wp-liverow .wp-liverow__fee s {
+  display: block;
+  color: rgba(0, 0, 0, 0.79);
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.wp-liverow tbody td {
+  white-space: normal;
+}
+
+.wp-liverow .wp-liverow__thereafter {
+  display: block;
+  margin-top: 8px;
+}
+
+.wp-liverow tbody tr:nth-child(even) td {
+  background: #f8f8f8;
+}
+
+.wp-liverow th:nth-child(8),
+.wp-liverow td.wp-liverow__offer {
+  width: 18%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.wp-liverow .wp-liverow__offer ul {
+  margin: 0;
+  padding-left: 1.1em;
+  text-align: left;
+}
+
+.wp-liverow .wp-liverow__offer li {
+  margin: 0 0 6px;
+  list-style: disc;
+}
+
+.wp-liverow .wp-liverow__offer li:last-child {
+  margin-bottom: 0;
+}
+
+.wp-liverow .wp-liverow__offer li.wp-liverow__portin {
+  font-weight: bold;
+  color: #774fda !important;
+}
+
+.wp-liverow th:nth-child(7),
+.wp-liverow td:nth-child(7),
+.wp-liverow th:nth-child(9),
+.wp-liverow td:nth-child(9) {
+  width: 14%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.wp-liverow .wp-liverow__chooseone {
+  display: block;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.wp-liverow .wp-liverow__vas {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.wp-liverow .wp-liverow__vas input[type="radio"] {
+  accent-color: #774fda;
+}
+
+.wp-liverow .wp-liverow__vas,
+.wp-liverow .wp-liverow__vas label,
+.wp-liverow .wp-liverow__vas span,
+.wp-liverow .wp-liverow__vas a {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.wp-liverow .wp-liverow__vas label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0 0 8px;
+  cursor: pointer;
+}
+
+.wp-liverow .wp-liverow__vas label:last-child {
+  margin-bottom: 0;
+}
+
+.wp-liverow .wp-liverow__vas input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.wp-liverow .wp-liverow__vas--readonly > span {
+  display: block;
+  margin: 0 0 8px;
+}
+
+.wp-liverow .wp-liverow__vas--readonly > span:last-child {
+  margin-bottom: 0;
+}
+
+.wp-liverow .wp-liverow__vas-copy {
+  min-width: 0;
+}
+
+.wp-liverow .wp-liverow__vas a,
+.wp-liverow .wp-liverow__vas a:visited {
+  color: #111;
+  text-decoration: none;
+}
+
+.wp-liverow .wp-liverow__vas a:hover {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wp-liverow button.wp-vas-opt__info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #774fda;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wp-liverow button.wp-vas-opt__info::before {
+  content: "i";
+  transform: translateY(-0.5px);
+}
+
+.wp-liverow button.wp-vas-opt__info img {
+  display: none;
+}
+
+.wp-liverow .wp-vas-opt__note {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 140%;
+  color: #5c5470;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.wp-threeplus {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+#threeplusframe {
+  border: 0;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.wp-liverow .wp-btn--register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.wp-liverow .wp-btn__wa {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}

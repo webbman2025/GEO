@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hsvworld EN — Live vs GEO A+ (compare)</title>
+  <style>
+    :root {
+      --bar: #1a1033;
+      --accent: #774fda;
+      --divider: #774fda;
+      --label-bg: rgba(26, 16, 51, 0.88);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f0a1a;
+      color: #fff;
+    }
+    .top {
+      flex: 0 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem;
+      padding: 0.55rem 0.85rem; background: var(--bar); border-bottom: 1px solid #3d2d66;
+      font-size: 0.82rem;
+    }
+    .top h1 { margin: 0; font-size: 0.95rem; font-weight: 700; flex: 1 1 12rem; }
+    .top a { color: #c4b5fd; }
+    .top .hint { opacity: 0.85; font-size: 0.75rem; flex: 1 1 100%; }
+    @media (min-width: 900px) {
+      .top .hint { flex: 1 1 auto; }
+    }
+    .plan-jump {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      background: #251a40;
+      border-bottom: 1px solid #3d2d66;
+    }
+    .plan-jump__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.85;
+      margin-right: 0.25rem;
+    }
+    .plan-jump button {
+      appearance: none;
+      border: 1px solid #6b5b95;
+      background: #1a1033;
+      color: #e9e0ff;
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .plan-jump button:hover {
+      border-color: var(--accent);
+      background: #2a1f4d;
+    }
+    .plan-jump button.is-active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .plan-jump button:focus-visible {
+      outline: 2px solid #c4b5fd;
+      outline-offset: 2px;
+    }
+    .compare {
+      flex: 1 1 auto;
+      min-height: 0;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .pane {
+      flex: 1 1 50%;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .pane-label {
+      flex: 0 0 auto;
+      padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.04em; background: var(--label-bg); border-bottom: 2px solid var(--accent);
+    }
+    .pane--live .pane-label { border-color: #888; }
+    .pane iframe {
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 0;
+      height: 100%;
+      border: 0;
+      background: #fff;
+      display: block;
+    }
+    .divider {
+      flex: 0 0 10px;
+      background: var(--divider);
+      cursor: col-resize;
+      touch-action: none;
+      z-index: 2;
+      box-shadow: -2px 0 0 #0f0a1a, 2px 0 0 #0f0a1a;
+    }
+    .divider::after {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px; height: min(120px, 30vh);
+      background: rgba(255,255,255,0.55);
+      border-radius: 2px;
+    }
+    .divider { position: relative; }
+    @media (max-width: 960px) {
+      .compare { flex-direction: column; }
+      .pane { flex: 1 1 50%; }
+      .divider {
+        flex: 0 0 10px;
+        width: 100%;
+        height: 10px;
+        cursor: row-resize;
+      }
+      .divider::after { width: 48px; height: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <h1>WORLD PLAN hsvworld EN — Live snapshot vs GEO A+ template</h1>
+    <a href="https://web.three.com.hk/plans/hsvworld/index-en.html" target="_blank" rel="noopener">Production URL</a>
+    <span class="hint">Plan tables use the same layout rules as the live site (scroll + ‹ › when the pane is ≤768px wide) · drag purple bar to resize</span>
+  </header>
+  <div class="plan-jump" role="toolbar" aria-label="Jump to plan table in both panes">
+    <span class="plan-jump__label">Plan tables</span>
+    <button type="button" class="is-active" data-plan-target="#pricing-global" aria-pressed="true">
+      Global (HK &amp; worldwide)
+    </button>
+    <button type="button" data-plan-target="#pricing-apac" aria-pressed="false">
+      APAC
+    </button>
+  </div>
+  <div class="compare" id="compare">
+    <div class="pane pane--live" id="pane-left">
+      <div class="pane-label">Live (snapshot)</div>
+      <iframe id="iframe-live" title="Live snapshot" src="index-en-live-snapshot.html?compare=1" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="divider" id="divider" role="separator" aria-orientation="vertical" aria-label="Resize panes"></div>
+    <div class="pane pane--aplus" id="pane-right">
+      <div class="pane-label">GEO / BLUF A+ template</div>
+      <iframe id="iframe-aplus" title="A+ template" src="index-en-geo-aplus.html?compare=1"></iframe>
+    </div>
+  </div>
+  <script>
+(function () {
+  var compare = document.getElementById("compare");
+  var divider = document.getElementById("divider");
+  var left = document.getElementById("pane-left");
+  var right = document.getElementById("pane-right");
+  var iframeLive = document.getElementById("iframe-live");
+  var iframeAplus = document.getElementById("iframe-aplus");
+  var planButtons = document.querySelectorAll(".plan-jump [data-plan-target]");
+  var dragging = false;
+
+  function scrollIframeToPlan(iframe, hash) {
+    if (!iframe || !iframe.contentDocument) return;
+    var doc = iframe.contentDocument;
+    var section = doc.querySelector(hash);
+    if (!section) return;
+    section.hidden = false;
+    section.removeAttribute("hidden");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function jumpBothPlanTables(hash) {
+    [iframeLive, iframeAplus].forEach(function (frame) {
+      scrollIframeToPlan(frame, hash);
+    });
+    planButtons.forEach(function (btn) {
+      var on = btn.getAttribute("data-plan-target") === hash;
+      btn.classList.toggle("is-active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    if (history.replaceState) {
+      history.replaceState(null, "", hash);
+    } else {
+      location.hash = hash;
+    }
+  }
+
+  planButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      jumpBothPlanTables(btn.getAttribute("data-plan-target"));
+    });
+  });
+
+  var iframesReady = 0;
+  function onIframeReady() {
+    iframesReady += 1;
+    if (iframesReady < 2) return;
+    var hash = location.hash;
+    if (hash === "#pricing-global" || hash === "#pricing-apac") {
+      jumpBothPlanTables(hash);
+    }
+  }
+
+  iframeLive.addEventListener("load", onIframeReady);
+  iframeAplus.addEventListener("load", onIframeReady);
+  window.addEventListener("hashchange", function () {
+    var hash = location.hash;
+    if (hash === "#pricing-global" || hash === "#pricing-apac") {
+      jumpBothPlanTables(hash);
+    }
+  });
+
+  function isStacked() {
+    return window.matchMedia("(max-width: 960px)").matches;
+  }
+
+  divider.addEventListener("pointerdown", function (e) {
+    dragging = true;
+    divider.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+
+  divider.addEventListener("pointermove", function (e) {
+    if (!dragging) return;
+    var rect = compare.getBoundingClientRect();
+    if (isStacked()) {
+      var pct = ((e.clientY - rect.top) / rect.height) * 100;
+      pct = Math.min(85, Math.max(15, pct));
+      left.style.flex = "0 0 " + pct + "%";
+      right.style.flex = "1 1 auto";
+    } else {
+      var pctX = ((e.clientX - rect.left) / rect.width) * 100;
+      pctX = Math.min(85, Math.max(15, pctX));
+      left.style.flex = "0 0 " + pctX + "%";
+      right.style.flex = "1 1 auto";
+    }
+  });
+
+  function stopDrag(e) {
+    if (!dragging) return;
+    dragging = false;
+    try { divider.releasePointerCapture(e.pointerId); } catch (_) {}
+  }
+  divider.addEventListener("pointerup", stopDrag);
+  divider.addEventListener("pointercancel", stopDrag);
+
+  window.addEventListener("resize", function () {
+    if (!dragging) {
+      left.style.flex = right.style.flex = "";
+    }
+  });
+})();
+  </script>
+</body>
+</html>

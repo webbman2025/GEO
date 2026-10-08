@@ -1,0 +1,252 @@
+/**
+ * hsvworld GEO type scale — matches iphone18_tony/applecss/geo-iphone-full.css
+ * and geo-iphone-table-only.css (table 16px desktop / 13px mobile).
+ * Linked only from hsvworld-geo-liverow-*.html. Do not load applecss onto these pages.
+ * Do not edit worldplan-geo-cms.css or worldplan-geo-liverow.css for this scale.
+ */
+
+.wp-page .txtpup {
+  color: #774fda !important;
+  font-weight: bold;
+}
+
+/* Feature USP cards — match live hsvworld (purple lead-in + black body in .wp-card__title) */
+.wp-page .wp-card {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.wp-page .wp-card__title {
+  font-weight: 400;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+  line-height: 140%;
+}
+
+.wp-page .wp-card__title .txtpup {
+  font-weight: 700;
+  line-height: 130%;
+}
+
+/* Plan-type toggle: 3HK main menu sets all nav { position: sticky; top: 0 } */
+.wp-page nav.wp-segment {
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  box-shadow: none !important;
+  width: 100%;
+  background: transparent !important;
+}
+
+/* A+ BLUF — crawlable caption under hero KV (index-*-geo-aplus.html) */
+.geo-hero__inner {
+  position: relative;
+}
+
+.geo-hero__bluf {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 10px 14px;
+  background: rgba(26, 22, 37, 0.85);
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* H1 — .geo-title-row h1 */
+.wp-page .wp-h1 {
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 768px) {
+  .wp-page .wp-h1 {
+    font-size: 1.35rem;
+  }
+}
+
+/* H2 — #pricing .geo-section-heading 28px / 18px (already in cms); keep pricing scale */
+@media (max-width: 768px) {
+  .wp-page .wp-h2 {
+    font-size: 18px;
+    line-height: 130% !important;
+  }
+}
+
+/* Section labels — body.geo-page .wp-label 18px / 16px (already in cms) */
+
+/* BLUF lead / note — .geo-bluf-lead 1rem, .geo-bluf-note 16px / 14px */
+.wp-page .wp-bluf__body {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .wp-page .wp-bluf__body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wp-page .wp-bluf__body {
+    font-size: 14px;
+  }
+}
+
+/* Pricing table — .geo-pricing-table th/td 16px desktop */
+.wp-page .wp-table {
+  font-size: 13px;
+}
+
+.wp-page .wp-table th {
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.wp-page .wp-table th *,
+.wp-page .wp-table th sup {
+  color: #fff;
+}
+
+.wp-page .wp-table th sup {
+  font-size: 10px;
+  font-weight: 700;
+  vertical-align: super;
+}
+
+.wp-page .wp-table td {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan,
+.wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan .wp-liverow__gb {
+  font-size: 16px;
+  line-height: 130%;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.wp-page .wp-liverow__new {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-page .wp-liverow .wp-liverow__gb,
+.wp-page .wp-liverow .wp-liverow__fee,
+.wp-page .wp-liverow .wp-liverow__price,
+.wp-page .wp-liverow .wp-liverow__price .wp-liverow__hk {
+  font-size: 16px;
+  line-height: 130%;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.wp-page .wp-liverow th:nth-child(8),
+.wp-page .wp-liverow td.wp-liverow__offer {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.wp-page .wp-liverow .wp-liverow__vas,
+.wp-page .wp-liverow .wp-liverow__vas label,
+.wp-page .wp-liverow .wp-liverow__vas span,
+.wp-page .wp-liverow .wp-liverow__vas a {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.wp-page .wp-table .wp-btn {
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 100px;
+}
+
+/* Mobile table — geo-iphone-table-only.css */
+@media (max-width: 768px) {
+  .wp-page .wp-table th,
+  .wp-page .wp-table td {
+    font-size: 13px;
+  }
+
+  .wp-page .wp-table th {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan,
+  .wp-page .wp-table.wp-liverow tbody th.wp-liverow__plan .wp-liverow__gb,
+  .wp-page .wp-liverow .wp-liverow__gb,
+  .wp-page .wp-liverow .wp-liverow__fee,
+  .wp-page .wp-liverow .wp-liverow__price,
+  .wp-page .wp-liverow .wp-liverow__price .wp-liverow__hk,
+  .wp-page .wp-liverow th:nth-child(8),
+  .wp-page .wp-liverow td.wp-liverow__offer,
+  .wp-page .wp-liverow .wp-liverow__vas,
+  .wp-page .wp-liverow .wp-liverow__vas label,
+  .wp-page .wp-liverow .wp-liverow__vas span,
+  .wp-page .wp-liverow .wp-liverow__vas a {
+    font-size: 13px;
+  }
+
+  .wp-page .wp-table .wp-btn {
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+
+  .wp-page .wp-filter__chip-title {
+    font-size: 18px;
+  }
+
+  .wp-page .wp-filter__chip-hint {
+    font-size: 16px;
+  }
+}
+
+/* FAQ — .geo-faq-q / .geo-faq-a */
+.wp-page .wp-faq__q {
+  font-size: 0.95rem;
+  padding: 1rem 1.125rem;
+}
+
+.wp-page .wp-faq__q::after,
+.wp-page .wp-faq.is-open .wp-faq__q::after {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.wp-page .wp-faq__a {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  padding: 0 1.125rem 1rem;
+}
+
+.wp-page .wp-faq.is-open .wp-faq__a {
+  padding-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .wp-page .wp-faq__q {
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+  }
+}
+
+/* T&C — .geo-tnc */
+.wp-page .wp-tnc {
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 480px) {
+  .wp-page .wp-tnc {
+    font-size: 0.72rem;
+  }
+}

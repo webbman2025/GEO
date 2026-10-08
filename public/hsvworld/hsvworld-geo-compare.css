@@ -1,0 +1,327 @@
+/*
+ * Live vs A+ compare iframes (hsvworld).
+ * Shell/gutters match simstd-geo-compare.css + worldplan .wp-inner.
+ * Plan tables follow worldplan-geo-cms.css breakpoints inside each iframe
+ * (same as https://web.three.com.hk/plans/hsvworld/index-en.html).
+ */
+
+html.geo-compare-preview {
+  overflow-x: hidden;
+}
+
+html.geo-compare-preview body {
+  overflow-x: hidden;
+  max-width: 100%;
+  background: #ffffff;
+}
+
+html.geo-compare-preview #pagewrap,
+html.geo-compare-preview .wp-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .wp-inner {
+  width: 88% !important;
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  html.geo-compare-preview .wp-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+html.geo-compare-preview .fullmenuframe,
+html.geo-compare-preview .languageframe,
+html.geo-compare-preview .languageclosebtnframe,
+html.geo-compare-preview .pmenubannercontainer,
+html.geo-compare-preview table.pagetablewidth {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .languageframe,
+html.geo-compare-preview .fullmenuframe {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+html.geo-compare-preview .geo-hero {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html.geo-compare-preview .geo-hero .displaypc {
+  display: block !important;
+}
+
+html.geo-compare-preview .geo-hero .displaymob {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  html.geo-compare-preview .geo-hero .displaypc {
+    display: none !important;
+  }
+
+  html.geo-compare-preview .geo-hero .displaymob {
+    display: block !important;
+  }
+}
+
+html.geo-compare-preview .geo-hero__bluf {
+  font-size: 0.72rem;
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+
+html.geo-compare-preview .wp-segment,
+html.geo-compare-preview .wp-table-wrap,
+html.geo-compare-preview .wp-table-stage {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .wp-segment {
+  flex-direction: column;
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+html.geo-compare-preview .wp-segment__btn {
+  min-height: 0;
+  border-radius: 0;
+  border-width: 2px;
+}
+
+html.geo-compare-preview .wp-segment__btn:first-child {
+  border-radius: 16px 16px 0 0;
+  border-bottom-width: 0;
+}
+
+html.geo-compare-preview .wp-segment__btn:last-child {
+  border-radius: 0 0 16px 16px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
+
+html.geo-compare-preview .wp-segment__title {
+  font-size: 16px;
+}
+
+html.geo-compare-preview .wp-segment__hint {
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+html.geo-compare-preview .wp-page .wp-stats {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 1px;
+  padding: 0 !important;
+  background: #fff;
+}
+
+html.geo-compare-preview .wp-page .wp-stat {
+  background: #b7d97b;
+  min-height: 73px;
+  min-width: 0;
+  height: 100%;
+  align-self: stretch;
+  justify-content: center;
+  gap: 0;
+  padding: 14px 10px;
+}
+
+html.geo-compare-preview .wp-page .wp-stat:not(:first-child) {
+  padding-left: 10px;
+}
+
+html.geo-compare-preview .wp-page .wp-stat:nth-child(even) {
+  padding: 14px 8px;
+}
+
+html.geo-compare-preview .wp-page .wp-stat:not(:first-child)::before {
+  display: none;
+}
+
+html.geo-compare-preview .wp-page .wp-stat:nth-child(1) {
+  border-radius: 16px 0 0 0;
+}
+
+html.geo-compare-preview .wp-page .wp-stat:nth-child(2) {
+  border-radius: 0 16px 0 0;
+}
+
+html.geo-compare-preview .wp-stat__value {
+  font-size: clamp(14px, 4.2vw, 20px);
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+html.geo-compare-preview .wp-stat__label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+html.geo-compare-preview .wphsvtxt {
+  white-space: normal !important;
+  padding-right: 0 !important;
+}
+
+html.geo-compare-preview .wp-bluf__body {
+  padding: 16px 14px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+html.geo-compare-preview .wp-page .wp-feat-row {
+  gap: 19px;
+}
+
+html.geo-compare-preview .wp-card {
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview .wp-card__icon {
+  width: 90px;
+  height: 90px;
+}
+
+html.geo-compare-preview .wp-card__icon img {
+  width: 90px;
+  height: 90px;
+}
+
+html.geo-compare-preview .wp-card__title {
+  font-size: clamp(13px, 1.6vw, 18px);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  html.geo-compare-preview .wp-page .wp-feat-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  html.geo-compare-preview .wp-card {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 10px;
+  }
+
+  html.geo-compare-preview .wp-card__title {
+    font-size: 16px;
+  }
+}
+
+html.geo-compare-preview .wp-h2 {
+  font-size: 18px;
+  line-height: 130% !important;
+  margin-bottom: 16px !important;
+  overflow-wrap: anywhere;
+}
+
+html.geo-compare-preview .wp-lead {
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+html.geo-compare-preview .wp-block,
+html.geo-compare-preview .wp-page section.wp-block {
+  margin-top: 28px;
+  padding-top: 28px;
+}
+
+html.geo-compare-preview .wp-benefits {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+html.geo-compare-preview .wp-benefit {
+  padding: 10px;
+  min-height: 0;
+}
+
+html.geo-compare-preview .wp-persona-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+html.geo-compare-preview .wp-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+html.geo-compare-preview .hkfooterpagewrap,
+html.geo-compare-preview .footercontent,
+html.geo-compare-preview .footerframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+html.geo-compare-preview #topslider,
+html.geo-compare-preview div.slider#topslider {
+  display: none !important;
+}
+
+html.geo-compare-preview #pricing-global,
+html.geo-compare-preview #pricing-apac {
+  display: block !important;
+  scroll-margin-top: 8px;
+}
+
+html.geo-compare-preview #pricing-global[hidden],
+html.geo-compare-preview #pricing-apac[hidden] {
+  display: block !important;
+}
+
+html.geo-compare-preview #pricing-apac {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid rgba(119, 79, 218, 0.35);
+}
+
+/* Plan tables: do not override — use worldplan-geo-cms.css + live liverow (same as web.three.com.hk). */
+html.geo-compare-preview .wp-table-wrap,
+html.geo-compare-preview .wp-table-stage,
+html.geo-compare-preview .wp-table-scroll {
+  max-width: 100%;
+  box-sizing: border-box;
+}
