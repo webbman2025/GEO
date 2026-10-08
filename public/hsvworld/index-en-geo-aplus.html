@@ -21,8 +21,8 @@
 <meta property="og:title" content="WORLD PLAN Handset Voucher Plans | 3 Hong Kong">
 <meta property="og:description" content="36-month WORLD PLAN Handset Voucher Plans. Global from HK$378/month; APAC from HK$298/month. Handset vouchers HK$1,500–HK$20,000. Admin fee HK$28/month.">
 <meta property="og:image" content="https://web.three.com.hk/plans/hsvworld/share-en.jpg">
-<link href="../../3hkworld/plancss/style.css" rel="stylesheet" type="text/css">
-<link href="../../3hkworld/plancss/media-queries.css" rel="stylesheet" type="text/css">
+<link href="https://web.three.com.hk/plans/plancss/style.css" rel="stylesheet" type="text/css">
+<link href="https://web.three.com.hk/plans/plancss/media-queries.css" rel="stylesheet" type="text/css">
 <link href="https://web.three.com.hk/plans/plancss/worldplan-geo-cms.css" rel="stylesheet" type="text/css">
 <link href="https://web.three.com.hk/plans/plancss/worldplan-geo-liverow.css?v=27" rel="stylesheet" type="text/css">
 <link href="https://web.three.com.hk/plans/plancss/hsvworld-geo.css?v=27" rel="stylesheet" type="text/css">
@@ -310,12 +310,914 @@
 </script>
 </head>
 <body>
-<!--#include virtual="../../../3hongkongmenu/3hongkongmainmenu-en.html" -->
+<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+<!-- main menu -->	
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /*font-family: 'Poppins', sans-serif;*/
+    }
+    
+.slick-slide { padding-top: 33px;padding-bottom: 33px; }
+
+.languagetopframe { width: 100%;height: auto;display: inline-block;background-color: #fff; }
+.languageframe { max-width: 1600px;height: 50px;margin: auto;padding: 10px 20px;display: flex;align-items: center;justify-content: space-between; }
+.languagelinktxt { display: none; }
+
+
+.toplinkframeL {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+.toplinkframeR {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.toplinktxt { color: #464646;cursor: pointer; }
+.toplinktxt:hover { text-decoration: underline; }
+.toplinkicon { width: 22px;height: 22px;margin-right: 5px;vertical-align: -5px; }
+.toplinkicontxt { color: #7c73d5;cursor: pointer; }
+.toplinkspace { width: 10px;clear: both;  height: 5px; }
+
+.pmenubannercontainer { display: flex;flex-direction: row;text-align: left;width: 1600px;padding: 0px 16px; }
+.pmenubannerframe { display: flex;row-gap: 18px;flex-direction: column;margin-right: 65px; }
+.pmenubanner { width: 320px;height: auto;display: inline-block;line-height: 0%;border-radius: 10px;overflow: hidden;cursor: pointer; }
+.pmenubannerimg { width: 100%;height: auto;display: inline-block;transition: all 0.5s ease; }
+.pmenubannerimg:hover { transform: scale(1.04); }
+.pmenucontainer { width: auto;height: auto;display: inline-block;padding-left: 65px;border-left: 2px #c6c6c6 solid; }
+.pmenulinkcolcontainer { 
+    width: auto;height: auto;display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 60px;
+  }
+	  
+.pmenulinkcolcontainer  { 
+    width: auto;height: auto;display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 60px;
+  }
+	  
+.pmenulinkcolcontainer2 { 
+    /*display: flex;
+    row-gap: 18px;
+    flex-direction: column;*/
+    width: auto;height: fit-content;display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 18px;
+}
+.pmenulinkcolcontainer3 { 
+    width: auto;height: fit-content;display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 18px;
+}
+.pmenulinkrowcontainer { 
+    /*display: flex;
+    row-gap: 18px;
+    flex-direction: column;*/
+    width: auto;height: fit-content;display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 18px;
+}
+.pmenulinkheader { width: auto;height: fit-content;display: inline-block; font-size: 24px;font-weight: bold;line-height: 120%;color: #7c73d5;padding-left: 14px;border-left: 3px #7c73d5 solid; }
+.pmenulinktxt { width: auto;height: auto;display: inline-block; font-size: 16px;font-weight: bold;line-height: 120%;color: #000000;cursor: pointer; }
+.pmenulinktxt:hover { color: #774fe1; }
+.pmenulinktxt2 { width: auto;height: auto;display: inline-block; font-size: 16px;font-weight: bold;line-height: 120%;color: #464646;padding-left: 20px;cursor: pointer; }
+.pmenulinktxt2:hover { color: #774fe1; }
+
+.pmenushortlinkframe { display: none; }
+
+
+	.menulogo {
+    width: 40px;
+    height: 56px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+.logoimg{ width: auto;height: 40px;display: list-item; }
+    nav{
+      /*position: fixed;*/
+      z-index: 8000;
+      width: 100%;
+      background: #ffffff;
+	    /*max-width: 1600px;*/
+      position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 5px 4px #0000000d;
+    }
+    nav .wrapper{
+      position: relative;
+      /*max-width: 1600px;*/
+      width: 100%;
+      /*padding: 0px 20px;*/
+      height: 56px;
+      line-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrapper .logo a{
+      color: #464646;
+      font-size: 30px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .wrapper .nav-links{
+      display: inline-flex;
+    }
+    .nav-links li{
+      list-style: none;
+	  line-height: 100%;
+    }
+    .nav-links li a{
+      color: #161616;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 8px 0px;
+      margin: 0 1rem;
+      transition: all 0.3s ease;
+      background: linear-gradient(#7c73d5, #7c73d5) center 100%;
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+	  display: grid;
+    cursor: pointer;
+    }
+    /* removed hover */
+.nav-links li a:hover{
+    color: #7c73d5;
+    background-size: 100% 3px;
+    }
+    .nav-links .mobile-item{
+      display: none;
+    }
+    .nav-links .drop-menu{
+      position: absolute;
+      background: #ffffff;
+      width: 180px;
+      line-height: 45px;
+      top: 55px; /*pulldown menu position*/
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .nav-links li:hover .drop-menu,
+    .nav-links li:hover .mega-box{
+      transition: all 0.3s ease;
+      top: 55px; /*pulldown menu position*/
+      opacity: 1;
+      visibility: visible;
+    }
+    .drop-menu li a{
+      width: 100%;
+      display: block;
+      padding: 0 0 0 15px;
+      font-weight: 400;
+      border-radius: 0px;
+    }
+    .mega-box{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0 0px;
+      top: 55px; /*pulldown menu position*/
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .mega-box .content{
+      background: #f3f3f3;
+      padding: 16px 16px;
+      display: flex;
+      width: 100%;
+      /*justify-content: space-between;*/
+      justify-content: center;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+    .mega-box .content .row{
+      width: calc(25% - 30px);
+      /*line-height: 45px;*/
+    }
+    .content .row img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content .row header{
+      color: #464646;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .content .row .mega-links{
+      margin-left: -40px;
+      border-left: 1px solid rgba(255,255,255,0.09);
+    }
+    .row .mega-links li{
+      padding: 0 20px;
+    }
+    .row .mega-links li a{
+      padding: 0px;
+      padding: 0 20px;
+      color: #d9d9d9;
+      font-size: 17px;
+      display: block;
+    }
+    .row .mega-links li a:hover{
+      color: #464646;
+    }
+    .wrapper .btn{
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+    .wrapper .btn.close-btn{
+      position: absolute;
+      right: 30px;
+      top: 10px;
+    }
+
+
+.fullmenuframe { width: 1600px;display: flex;align-items: center;padding: 0px 20px; }
+
+
+    /* MOBILE */
+    @media screen and (max-width: 1180px) {
+
+.logoimg { height: 50px; }
+.languagetopframe { display: none; }
+.languagelinktxt { font-size: 18px;font-weight: bold;color: #464646;display: inline-block; }
+.languageopenbtnframe { display: flex;align-items: center;grid-gap: 26px;gap: 26px; }
+.languageclosebtnframe { display: flex;align-items: center;grid-gap: 26px;gap: 26px;justify-content: space-between;flex-direction: row-reverse;padding: 0px 20px; }
+
+.pmenubannercontainer { flex-direction: column-reverse;width: 100%; }
+.pmenucontainer { padding-left: 0px;border-left: none; }
+.pmenulinkcolcontainer { grid-template-columns: 1fr;grid-gap: 20px;margin-bottom: 30px; }
+.pmenulinkcolcontainer2 { grid-template-columns: 0.9fr 1.1fr; }
+.pmenulinkheader { font-size: 20px; }
+.pmenubannerframe { margin-right: 0px;align-items: center; }
+.pmenubanner { width: 304px; }
+
+.pmenushortlinkframe { width: 100%;height: auto;display: inline-block;background-color: #f8f8f8;padding: 18px 18px 100px 18px;line-height: 100% !important; }
+.pmenushortlinkheader { width: 100%;height: auto;display: inline-block;font-size: 16px;font-weight: bold;margin-bottom: 22px;color: #464646; }
+.pmenushortlinktxtframe {
+    padding: 0;
+    overflow: hidden;
+    grid-gap: 1rem;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.pmenushortlinktxt { width: 100%;height: auto;display: inline-block;font-size: 16px;font-weight: bold;color: #727272; }
+
+.wrapper .btn.close-btn { position: unset; }
+
+.fullmenuframe { justify-content: space-between;height: 85px;width: 100%; }
+
+.fa-bars:before { content: unset; }
+.fa-times:before { content: unset; }
+
+
+    nav .wrapper{
+      justify-content: space-between;
+      height: 85px;
+    }
+
+      .wrapper .btn{ display: block; }
+
+      .wrapper .nav-links{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        background: #ffffff;
+        display: block;
+        padding: 0px 0px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+        transition: all 0.3s ease;
+      }
+
+      /* custom scroll bar */
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #ffffff; }
+      ::-webkit-scrollbar-thumb { background: #3A3B3C; }
+
+      #menu-btn:checked ~ .nav-links{ left: 0%; }
+      #menu-btn:checked ~ .btn.menu-btn{ display: none; }
+      #close-btn:checked ~ .btn.menu-btn{ display: block; }
+
+      .nav-links li{ margin: 10px 0px;line-height: 50px; }
+      .nav-links li a{ padding: 0 20px; display: block; font-size: 20px; }
+
+      .nav-links .drop-menu{
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+      }
+
+      /* ✅ Fix: open any mega-box when its checkbox is checked */
+      .nav-links input[type="checkbox"][id^="showMenu"]:checked ~ .mega-box{
+        max-height: 1000px;
+      }
+
+      .nav-links .desktop-item{ display: none; }
+      .nav-links .mobile-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #464646;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 18px;
+        padding-right: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .nav-links .mobile-item::after{
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+      }
+      /* Rotate caret when open */
+      .nav-links input[type="checkbox"][id^="showMenu"]:checked + .mobile-item::after{
+        transform: rotate(180deg);
+      }
+
+      .drop-menu li{ margin: 0; }
+      .drop-menu li a{ border-radius: 5px; font-size: 18px; }
+
+      .mega-box{
+        position: static;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        /*padding: 0 20px;*/
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .mega-box .content{
+        box-shadow: none;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .mega-box .content .row{
+        width: 100%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .mega-box .content .row:nth-child(1),
+      .mega-box .content .row:nth-child(2){
+        border-top: 0px;
+      }
+      .content .row .mega-links{ border-left: 0px; padding-left: 15px; }
+      .row .mega-links li{ margin: 0; }
+      .content .row header{ font-size: 19px; }
+    }
+
+    nav input{ display: none; }
+
+    .body-text{
+      /*position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      padding: 0 30px;*/
+      transition: filter 0.3s ease;
+    }
+    .body-text div{ /*font-size: 45px; font-weight: 600;*/ }
+
+    @media screen and (min-width: 971px) {
+      body:has(.nav-links li:hover .drop-menu) .body-text,
+      body:has(.nav-links li:hover .mega-box) .body-text{
+        filter: blur(5px);
+      }
+    }
+  
+/* ===== FIX: keep active highlight when mega-box is open ===== */
+@media screen and (min-width: 971px) {
+  .nav-links li:hover > a.desktop-item,
+  .nav-links li:focus-within > a.desktop-item{
+    color:#7c73d5;
+    background-size:100% 3px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .nav-links input[id^="showMenu"]:checked + .mobile-item{
+    color:#7c73d5;
+    /*background:#f3f3f3;*/
+  }
+}
+
+</style>
+
+<div></div>
+  <div class="languagetopframe">
+    <div class="languageframe">
+    <ul class="toplinkframeL">
+    <li><div class="toplinktxt" onclick="window.open('https://www.3supreme.vip/en/index.html', '_blank')" aria-label="Open 3SUPREME in a new tab">3SUPREME</div></li>
+    <li>|</li>
+    <li><div class="toplinktxt" onclick="window.open('https://web.three.com.hk/3business/index-en.html', '_blank')" aria-label="Open 3Business in a new tab">3Business</div></li>
+    <li>|</li>
+    <li><div class="toplinktxt" onclick="window.open('https://www.xtramallhk.com/home/?___store=default', '_blank')" aria-label="Open XtraMall in a new tab">XtraMall</div></li>
+    </ul>
+    <ul class="toplinkframeR">
+    <!--li><div class="toplinkicontxt" onclick="window.open('https://www.three.com.hk/login', '_blank')"><img src="https://web.three.com.hk/icon-3hklogin.png" class="toplinkicon">登入</div></li-->
+    <li><div class="toplinktxt" style="text-decoration: none;" onclick="toggleLanguage()" aria-label="Switch to Chinese">中</div></li>
+    </ul>
+    </div>
+  </div>
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="wrapper">
+
+<div class="fullmenuframe">
+
+      <div class="menulogo"><a href="https://www.three.com.hk/en/home.html" target="_blank"><img src="https://web.three.com.hk/3hklogo-en.svg" title="3HK" alt="3HK" class="logoimg"></a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul id="main-nav-links" class="nav-links" aria-label="Menu">
+<li class="languageclosebtn-item">
+    <div class="languageclosebtnframe">
+    <div class="languagelinktxt" onclick="toggleLanguage()" aria-label="Switch to Chinese">中</div>
+    <label for="close-btn" class="btn close-btn" role="button" tabindex="0" aria-label="Close menu" aria-controls="main-nav-links"><i class="fas fa-times"><img src="https://web.three.com.hk/3hongkongmenu/images/menuclose.webp" alt="Close menu icon"></i></label>
+		</div>
+</li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Subscription /<div class="toplinkspace"></div>Contract Renewal</a>
+          <input type="checkbox" id="showMenu1">
+          <label for="showMenu1" class="mobile-item">Subscription / Contract Renewal</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/3hkworld/index-en.html', '_parent')" aria-label="Go to 5G WORLD PLAN page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-wp-en.webp" class="pmenubannerimg" title="5G WORLD PLAN" alt="5G WORLD PLAN">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkheader">For New Customers</div>
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/healthfit/index-en.html', '_parent')">Health Fit 5G Plan</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/vipet/index-en.html', '_parent')">VIPet Plan</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/5g/index-en.html', '_parent')">5G Local Monthly Plans</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/cnhkmo/index-en.html', '_parent')">5G Roam Like Home Monthly Plan</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/3hkworld/index-en.html', '_parent')">5G WORLD PLAN</div>
+						
+                    <!--div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/backtoschool/index-5g-en.html', '_parent')">Tertiary Student and Staff Zone</div-->
+
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/yymobile/index-5g-en.html', '_parent')">YY Mobile 5G Plan</div>
+						
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/plans/simplan/index-en.html', '_parent')">4.5G Monthly Plans</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://iphone.three.com.hk/website/home/index-en.html', '_parent')">iPhone Monthly Plans</div>
+                    </div>
+                  </div>
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkheader">For Existing Customers</div>
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/3Care/eng/MultiOfferOTPLogin.jsp?lang=eng&cid=Retention&cmpid=CAMP00000&intcmp=or3com', '_blank')">Online Contract Renewal</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/mgm/index-en.html', '_parent')">Member Referral Programme</div>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Home<div class="toplinkspace"></div>Broadband</a>
+          <input type="checkbox" id="showMenu2">
+          <label for="showMenu2" class="mobile-item">Home Broadband</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/5gbroadband/plan-monthly-en.html', '_parent')" aria-label="Go to 5G Broadband page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-5gbb-en.webp" class="pmenubannerimg" title="5G Broadband" alt="5G Broadband">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer col3">
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkheader">5G Broadband</div>
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/5gbroadband/plan-monthly-en.html', '_parent')">Online Exclusive Monthly Plans</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/5gbroadband/proplan-en.html', '_parent')">5G Broadband PRO Plan</div>
+                    </div>
+                  </div>
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkheader">Fibre Broadband</div>
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/fibrebroadband/index-en.html', '_parent')">1000M Fibre Broadband</div>
+                  </div>
+                  </div>
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkheader">Home Broadband & Phone</div>
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/5gbroadband/homephone-en.html', '_parent')">Home Phone Service Plan</div>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Handsets &<div class="toplinkspace"></div>Accessories</a>
+          <input type="checkbox" id="showMenu3">
+          <label for="showMenu3" class="mobile-item">Handsets & Accessories</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/vas/hsservice/index-en.html', '_parent')" aria-label="Go to Handset Switch Service page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-hsservice-en.webp" class="pmenubannerimg" title="Handset Switch Service" alt="Handset Switch Service">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/en/phones.html', '_parent')">Phones & Devices</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://iphone.three.com.hk/website/home/index-en.html', '_parent')">iPhone</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/en/smartphones.html', '_parent')">All smartphones and devices</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/vas/hsservice/index-en.html', '_parent')">Handset Switch Service</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/3Care/eng/handsetTradein/trade_in.jsp', '_blank')">Trade-in Handset Service</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/3reedomphone/index-en.html', '_parent')">'3reedom Phone' Plan</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Prepaid<div class="toplinkspace"></div>SIM Cards</a>
+          <input type="checkbox" id="showMenu4">
+          <label for="showMenu4" class="mobile-item">Prepaid SIM Cards</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://www.three.com.hk/prepaid/DIY/en/?', '_parent')" aria-label="Go to DIY Prepaid SIM page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-diy-en.webp" class="pmenubannerimg" title="DIY Prepaid SIM" alt="DIY Prepaid SIM">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/prepaid/DIY/en/?', '_blank')">DIY Prepaid SIM</div>
+                    <div class="pmenulinktxt2" onclick="window.open('https://web.three.com.hk/prepaid/travellerssim/index-en.html', '_parent')">Hong Kong & Travel Packages</div>
+                    <div class="pmenulinktxt2" onclick="window.open('https://web.three.com.hk/prepaid/diysim/smart-watch-esim-en.html', '_parent')">Smart Watch eSIM</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.simworld.net/en/index.html', '_blank')">Other Prepaid SIM</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/prepaid/realnameregistration/index-en.html', '_parent')">Real-name Registration</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Roaming &<div class="toplinkspace"></div>Satellite Service</a>
+          <input type="checkbox" id="showMenu5">
+          <label for="showMenu5" class="mobile-item">Roaming & Satellite Service</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/roaming/ric/index-en.html', '_parent')" aria-label="Go to Roam-in-Command page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-ric-en.webp" class="pmenubannerimg" title="Roam-in-Command" alt="Roam-in-Command">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/roamingservice/index-en.html', '_parent')">Roaming Service</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/en/roaming.html', '_parent')">Roaming & IDD</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/idd001/index-en.html', '_parent')">IDD Service</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/roamingservice/index-en.html#cnmo', '_parent')">Chinese Mainland Services</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/satelliteservices/index-en.html', '_parent')">Satellite Service</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/network/index-en.html', '_parent')">Inbound Roamer Services</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/roaming/coverage/index-en.html', '_parent')">Roaming Coverage and Tariff</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">Value Added<div class="toplinkspace"></div>Services</a>
+          <input type="checkbox" id="showMenu6">
+          <label for="showMenu6" class="mobile-item">Value Added Services</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/vas/ainetprotect/index-en.html', '_parent')" aria-label="Go to AI Net Protect page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2606-ainetprotect-en.webp" class="pmenubannerimg" title="AI Net Protect" alt="AI Net Protect">
+              </div>
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/vas/carrierbilling/index-en.html', '_parent')" aria-label="Go to Direct Carrier Billing Service page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2606-carrierbilling-en.webp" class="pmenubannerimg" title="Direct Carrier Billing Service" alt="Direct Carrier Billing Service">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/vas/home/index-en.html', '_parent')">Value Added Services</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/en/topup-vas.html', '_parent')">Data Top-up</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">5G<div class="toplinkspace"></div>Network</a>
+          <input type="checkbox" id="showMenu7">
+          <label for="showMenu7" class="mobile-item">5G Network</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/5g/index-en.html', '_parent')" aria-label="Go to 5G Network page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-5g-en.webp" class="pmenubannerimg" title="5G Network" alt="5G Network">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/5g/index-en.html', '_parent')">5G network</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a tabindex="0" role="button" class="desktop-item">MoneyBack Reward<div class="toplinkspace"></div>Programme</a>
+          <input type="checkbox" id="showMenu8">
+          <label for="showMenu8" class="mobile-item">MoneyBack Reward Programme</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/moneyback/home/index-en.html', '_parent')" aria-label="Go to MoneyBack Reward Programme page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-mb-en.webp" class="pmenubannerimg" title="MoneyBack Reward Programme" alt="MoneyBack Reward Programme">
+              </div>
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/moneyback/hsbc/index-en.html', '_parent')" aria-label="Go to HSBC easy Credit Card Exclusive page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-mbhsbc2025-en.webp" class="pmenubannerimg" title="HSBC easy Credit Card Exclusive" alt="HSBC easy Credit Card Exclusive">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer3">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/moneyback/home/index-en.html', '_parent')">MoneyBack Introduction</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/moneyback/earn/index-en.html', '_parent')">Earn Points</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/moneyback/burn/billpayment-en.html', '_parent')">Redeem Rewards</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/moneyback/hsbc/index-en.html', '_parent')">HSBC easy Credit Card Exclusive</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </li>
+        <li style="margin-bottom: 0px;">
+          <a tabindex="0" role="button" class="desktop-item">Info &<div class="toplinkspace"></div>Support</a>
+          <input type="checkbox" id="showMenu9">
+          <label for="showMenu9" class="mobile-item">Info & Support</label>
+          <div class="mega-box">
+            <div class="content">
+            <div class="pmenubannercontainer">
+              <div class="pmenubannerframe">
+              <div class="pmenubanner" onclick="window.open('https://web.three.com.hk/my3/index-en.html', '_parent')" aria-label="Go to My3 App page">
+              <img src="https://web.three.com.hk/3hongkongmenu/images/2604-my3app-en.webp" class="pmenubannerimg" title="My3 App" alt="My3 App">
+              </div>
+            </div>
+              <div class="pmenucontainer">
+                  <div class="pmenulinkcolcontainer">
+                  <div class="pmenulinkcolcontainer2">
+                    <div class="pmenulinkrowcontainer">
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/3Care/eng/info/3CareInfoSupport.jsp', '_blank')">FAQ</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://www.three.com.hk/3Care/eng/info/InfoMap.jsp', '_blank')">3Shop Address</div>
+                    <div class="pmenulinktxt" onclick="window.open('https://web.three.com.hk/my3/index-en.html', '_parent')">My3 App</div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="pmenushortlinkframe" style="margin-top: 0px;">
+        <div class="pmenushortlinkheader">Quick Links</div>
+        <div class="pmenushortlinktxtframe">
+        <div class="pmenushortlinktxt" onclick="window.open('https://www.3supreme.vip/en/index.html', '_blank')">3SUPREME</div>
+        <div class="pmenushortlinktxt" onclick="window.open('https://web.three.com.hk/3business/index-en.html', '_blank')">3Business</div>
+        <div class="pmenushortlinktxt" onclick="window.open('https://www.xtramallhk.com/home/?___store=default', '_blank')">XtraMall</div>
+      </div>
+        </li>
+      </ul>
+
+    <div class="languageopenbtnframe">
+    <div class="languagelinktxt" onclick="toggleLanguage()" aria-label="Switch to Chinese">中</div>
+    <label for="menu-btn" class="btn menu-btn" role="button" tabindex="0" aria-label="Open menu" aria-controls="main-nav-links"><i class="fas fa-bars"><img src="https://web.three.com.hk/3hongkongmenu/images/menuopen.webp" alt="Open menu icon"></i></label>
+		</div>
+
+</div>
+    
+    </div>
+  </nav>
+
+  <script>
+    // Optional: mobile-only accordion so only one is open at a time
+    const mobileBreak = 1180;
+    const toggles = document.querySelectorAll('.nav-links input[type="checkbox"][id^="showMenu"]');
+
+    function isMobile() {
+      return window.matchMedia(`(max-width: ${mobileBreak}px)`).matches;
+    }
+
+    toggles.forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (!isMobile() || !cb.checked) return;
+        toggles.forEach(other => { if (other !== cb) other.checked = false; });
+      });
+    });
+
+    // Reset open states when switching out of mobile
+    const mq = window.matchMedia(`(max-width: ${mobileBreak}px)`);
+    mq.addEventListener('change', e => {
+      if (!e.matches) toggles.forEach(cb => cb.checked = false);
+    });
+  </script>
+  
+<script>
+function toggleLanguage() {
+  const { pathname, search, hash } = window.location;
+  let newPath;
+
+  if (pathname.includes('-en.html')) {
+    // EN → ZH
+    newPath = pathname.replace('-en.html', '.html');
+  } else if (pathname.endsWith('.html')) {
+    // ZH → EN
+    newPath = pathname.replace('.html', '-en.html');
+  } else {
+    return; // Not an html page
+  }
+
+  window.location.href = newPath + search + hash;
+}
+</script>
+<script>
+(function(){
+  // Mapping for pmenubanner -> descriptive labels (English)
+  const bannerMap = [
+    {match: '/3hkworld/', label: 'Go to 5G WORLD PLAN page'},
+    {match: '/5gbroadband/', label: 'Go to 5G Broadband page'},
+    {match: '/vas/hsservice/', label: 'Go to Handset Switch Service page'},
+    {match: '/prepaid/DIY', label: 'Go to DIY Prepaid SIM page'},
+    {match: '/roaming/ric/', label: 'Go to Roam-in-Command page'},
+    {match: '/vas/eareyebodyhealthcheck/', label: 'Go to BowtieGo Ear, eye, body health-check plan page'},
+    {match: '/vas/antiscam/', label: 'Go to Anti-scam service page'},
+    {match: '/5g/index-en.html', label: 'Go to 5G Network page'},
+    {match: '/moneyback/home/', label: 'Go to MoneyBack Reward Programme page'},
+    {match: '/moneyback/hsbc/', label: 'Go to HSBC easy Credit Card Exclusive page'},
+    {match: '/my3/index-en.html', label: 'Go to My3 App page'}
+  ];
+
+  // Ensure decorative images have empty alt
+  document.querySelectorAll('img.pmenubannerimg').forEach(img => { if(!img.hasAttribute('alt')) img.setAttribute('alt',''); });
+
+  // Assign aria-label for pmenubanner elements based on onclick URL
+  document.querySelectorAll('.pmenubanner').forEach(el => {
+    if(el.hasAttribute('aria-label')) return;
+    const onclick = el.getAttribute('onclick') || '';
+    const found = bannerMap.find(m => onclick.includes(m.match));
+    if(found) el.setAttribute('aria-label', found.label);
+    else {
+      const text = el.textContent.trim();
+      if(text) el.setAttribute('aria-label', text);
+      else el.setAttribute('aria-label', 'Go to related page');
+    }
+  });
+
+  // Make clickable non-interactive elements keyboard accessible and add ARIA roles/labels
+  const interactive = ['A','BUTTON','INPUT','LABEL'];
+  document.querySelectorAll('[onclick]').forEach(el => {
+    if(interactive.includes(el.tagName)) return;
+    if(!el.hasAttribute('role')) el.setAttribute('role','link');
+    if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','0');
+    if(!el.hasAttribute('aria-label')){
+      const text = el.textContent.trim();
+      if(text) el.setAttribute('aria-label', text);
+    }
+    el.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  // For mobile accordion labels: set aria-controls and aria-expanded
+  document.querySelectorAll('label[for^="showMenu"]').forEach(label => {
+    const cbId = label.getAttribute('for');
+    const cb = document.getElementById(cbId);
+    if(!cb) return;
+    const li = label.closest('li');
+    let mega = li ? li.querySelector('.mega-box') : null;
+    if(!mega) {
+      mega = cb.nextElementSibling && cb.nextElementSibling.classList && cb.nextElementSibling.classList.contains('mega-box') ? cb.nextElementSibling : null;
+    }
+    if(mega){ if(!mega.id) mega.id = 'mega-box-' + cbId; label.setAttribute('aria-controls', mega.id); }
+    label.setAttribute('aria-expanded', cb.checked ? 'true' : 'false');
+    cb.addEventListener('change', () => label.setAttribute('aria-expanded', cb.checked ? 'true' : 'false'));
+  });
+
+  // Make sure top links that open in a new tab have aria-label indicating it
+  document.querySelectorAll('.toplinktxt, .pmenushortlinktxt').forEach(el => {
+    const onclick = el.getAttribute('onclick') || '';
+    if(onclick.includes("'_blank'") && !el.hasAttribute('aria-label')){
+      const text = el.textContent.trim();
+      if(text) el.setAttribute('aria-label', 'Open ' + text + ' in a new tab');
+    }
+  });
+
+})();
+</script>
+<!-- main menu -->	
+
 
 <div id="pagewrap" class="body-text wp-page">
 
 <!-- topmenu -->
-<!--#include virtual="../../../plans/planinc/topmenuslider-en.html" -->
+<div class="slider" id="topslider">
+<section id="3hkoffer" class="sectionoff" onClick="parent.location='https://web.three.com.hk/3hkjul25offer/index-en.html'">Summer Crazy Deals</section>
+<section id="hsbc" class="sectionoff" onClick="parent.location='https://web.three.com.hk/hsbc2025/index-en.html'">HSBC Credit Card Limited-time Offers</section>
+<!--section id="familyfun5g" class="sectionoff" onClick="parent.location='https://web.three.com.hk/plans/familyfun5g/index-en.html'">"Family FUN" 5G Plan</section-->
+<section id="topslider2" class="sectionoff" onClick="parent.location='https://web.three.com.hk/plans/5g/index-en.html'">5G Monthly Plans</section>
+<section id="topslider4" class="sectionoff" onClick="parent.location='https://web.three.com.hk/plans/simplan/index-en.html'">4.5G Monthly Plans</section>
+<section id="top5gstudentsim" class="sectionoff" onClick="parent.location='https://web.three.com.hk/plans/5gstudentsim/index-en.html'">Tertiary Student Monthly Plan</section>
+<section id="topslider1" class="sectionoff" onClick="parent.location='https://iphone.three.com.hk/website/home/index-en.html'">iPhone Monthly Plans</section>
+<!--section id="topslider6" class="sectionoff" onClick="parent.location='https://web.three.com.hk/prepaid/travellerssim/index-en.html'">Prepaid SIM</section-->
+</div>
 <!-- topmenu -->
 
 <section class="geo-hero" aria-label="WORLD PLAN Handset Voucher Plans promotion">
@@ -401,15 +1303,15 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 </thead>
 <tbody>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$1,500</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$378</span></td><td>30GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>3,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$7,800</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$518</span></td><td>30GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$10,000</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$598</span></td><td>50GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$15,000</span><br><span class="wp-liverow__new">NEW</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$798</span></td><td>70GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>100 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$20,000</span><br><span class="wp-liverow__new">NEW</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$1,288</span></td><td>200GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>300 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>20+20<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -445,15 +1347,15 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 </thead>
 <tbody>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$1,500</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$298</span></td><td>30GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>3,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$7,800</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$418</span></td><td>30GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$10,000</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$498</span></td><td>30GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>50 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_251114_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$15,000</span><br><span class="wp-liverow__new">NEW</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$698</span></td><td>70GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>100 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>10+10<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 <tr><th scope="row" class="wp-liverow__plan"><span class="wp-liverow__gb">HK$20,000</span><br><span class="wp-liverow__new">NEW</span></th><td class="wp-liverow__fee"><span class="wp-liverow__price"><span class="wp-liverow__hk">HK</span>$1,188</span></td><td>200GB<br><span class="wp-liverow__thereafter">Thereafter Hong Kong local infinite data<sup>∆</sup> (up to 1Mbps)</span></td><td>5,000 mins</td><td>300 mins<br><span class="wp-liverow__thereafter">Thereafter HK$0.5/min</span></td><td>20+20<sup>@</sup> mins</td><td>36 months</td><td>HK$0.65/sms</td><td class="wp-liverow__offer"><ul><li>24-month Handset Switch Lite Service</li><li>or Free Zurich 24-month travel insurance</li><li>or 24-month PIA VPN Monthly Plan</li>
-<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="../world-plan/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
+<li>Extra 3GB local data for MoneyBack members<sup>♢</sup></li></ul></td><td><a class="wp-btn wp-btn--register" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en" target="_blank" rel="noopener"><img class="wp-btn__wa" src="https://web.three.com.hk/plans/global/assets/icon-whatsapp-register.svg" alt="" width="16" height="16"> Register</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -465,12 +1367,12 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 </section>
 
 <div class="wp-mb">
-<img class="wp-mb__logo" src="../world-plan/assets/cms/moneyback.png" alt="" width="34" height="34">
+<img class="wp-mb__logo" src="https://web.three.com.hk/plans/global/assets/cms/moneyback.png" alt="" width="34" height="34">
 <div class="wp-mb__main">
 <div class="wp-mb__copy">
 <p class="wp-mb__title">MoneyBack Tips:</p>
 <p class="wp-mb__text">MoneyBack members get extra 3GB local data<sup>♢</sup>. MoneyBack Points can be turned into cash discounts for monthly bill payment or purchase of smartphones, accessories and digital lifestyle services.</p>
-<p class="wp-mb__earn">Earn <img class="wp-mb__point" src="../world-plan/assets/cms/moneyback-point.png" alt="" width="18" height="18"> 1 Point on every $5 bill payment<sup>❖</sup></p>
+<p class="wp-mb__earn">Earn <img class="wp-mb__point" src="https://web.three.com.hk/plans/global/assets/cms/moneyback-point.png" alt="" width="18" height="18"> 1 Point on every $5 bill payment<sup>❖</sup></p>
 </div>
 <a class="wp-mb__link" href="https://web.three.com.hk/moneyback/home/index-en.html">Learn more about<br>MoneyBack Reward Programme</a>
 </div>
@@ -480,28 +1382,28 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <h2 class="wp-h2" id="benefits-heading">What are the benefits of WORLD PLAN Handset Voucher Plans?</h2>
 <div class="wp-benefits">
 <article class="wp-benefit">
-<div class="wp-benefit__icon" aria-hidden="true"><img src="../world-plan/assets/benefits/icon-worldwide.png" alt="" width="90" height="90"></div>
+<div class="wp-benefit__icon" aria-hidden="true"><img src="https://web.three.com.hk/plans/global/assets/benefits/icon-worldwide.png" alt="" width="90" height="90"></div>
 <div class="wp-benefit__copy">
 <h3 class="wp-benefit__title">Handset voucher included</h3>
 <p class="wp-benefit__desc">HK$1,500 to HK$20,000 toward a new phone on a 36-month contract.</p>
 </div>
 </article>
 <article class="wp-benefit">
-<div class="wp-benefit__icon" aria-hidden="true"><img src="../world-plan/assets/benefits/icon-save-roaming.png" alt="" width="90" height="90"></div>
+<div class="wp-benefit__icon" aria-hidden="true"><img src="https://web.three.com.hk/plans/global/assets/benefits/icon-save-roaming.png" alt="" width="90" height="90"></div>
 <div class="wp-benefit__copy">
 <h3 class="wp-benefit__title">WORLD PLAN data at home and overseas</h3>
 <p class="wp-benefit__desc">One shared data pool for Hong Kong and designated roaming destinations.</p>
 </div>
 </article>
 <article class="wp-benefit">
-<div class="wp-benefit__icon" aria-hidden="true"><img src="../world-plan/assets/benefits/icon-voice.png" alt="" width="90" height="90"></div>
+<div class="wp-benefit__icon" aria-hidden="true"><img src="https://web.three.com.hk/plans/global/assets/benefits/icon-voice.png" alt="" width="90" height="90"></div>
 <div class="wp-benefit__copy">
 <h3 class="wp-benefit__title">Local, Mainland, Macau and roaming voice</h3>
 <p class="wp-benefit__desc">Minutes included on every tier; thereafter HK$0.5/min in Chinese Mainland and Macau.</p>
 </div>
 </article>
 <article class="wp-benefit">
-<div class="wp-benefit__icon" aria-hidden="true"><img src="../world-plan/assets/benefits/icon-no-sim-swap.png" alt="" width="90" height="90"></div>
+<div class="wp-benefit__icon" aria-hidden="true"><img src="https://web.three.com.hk/plans/global/assets/benefits/icon-no-sim-swap.png" alt="" width="90" height="90"></div>
 <div class="wp-benefit__copy">
 <h3 class="wp-benefit__title">No SIM swap — connect on arrival</h3>
 <p class="wp-benefit__desc">Enable data roaming and connect as soon as you land.</p>
@@ -513,7 +1415,7 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <section class="wp-block" id="coverage-global" aria-labelledby="coverage-heading-global">
 <h2 class="wp-h2" id="coverage-heading-global">Which destinations does WORLD PLAN Handset Voucher Global cover?</h2>
 <article class="wp-card wp-coverage">
-<div class="wp-card__icon"><img src="../../3hkworld/images/icon02.svg" alt="" width="90" height="90"></div>
+<div class="wp-card__icon"><img src="https://web.three.com.hk/3hkworld/images/icon02.svg" alt="" width="90" height="90"></div>
 <div class="wp-coverage__body">
 <p class="wp-card__desc">Global shared data has <strong>no additional roaming data charges</strong> in designated countries and regions, including popular <strong>Asian travel spots</strong>, major <strong>European countries</strong>, the <strong>US</strong> and <strong>Canada</strong>, <strong>Australia</strong>, <strong>New Zealand</strong>, the <strong>Middle East</strong> and more.</p>
 <button class="wp-coverage__toggle" type="button" aria-expanded="false" aria-controls="wp-coverage-list-global" data-show="View full country list" data-hide="Hide country list">View full country list</button>
@@ -531,7 +1433,7 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <section class="wp-block" id="coverage-apac" aria-labelledby="coverage-heading-apac" hidden>
 <h2 class="wp-h2" id="coverage-heading-apac">Which destinations does WORLD PLAN Handset Voucher APAC cover?</h2>
 <article class="wp-card wp-coverage">
-<div class="wp-card__icon"><img src="../../3hkworld/images/icon02.svg" alt="" width="90" height="90"></div>
+<div class="wp-card__icon"><img src="https://web.three.com.hk/3hkworld/images/icon02.svg" alt="" width="90" height="90"></div>
 <div class="wp-coverage__body">
 <p class="wp-card__desc">APAC shared data covers designated <strong>Asia Pacific</strong> destinations including <strong>Japan</strong>, <strong>Singapore</strong>, <strong>Thailand</strong>, <strong>Taiwan</strong>, <strong>Chinese Mainland</strong>, <strong>Macau</strong>, <strong>Australia</strong> and <strong>South Korea</strong>.</p>
 <button class="wp-coverage__toggle" type="button" aria-expanded="false" aria-controls="wp-coverage-list-apac" data-show="View full country list" data-hide="Hide country list">View full country list</button>
@@ -547,22 +1449,22 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <div class="wp-persona-grid">
 <article class="wp-persona">
 <p class="wp-persona__title">The Practical One</p>
-<div class="wp-persona__photo"><img src="../world-plan/assets/personas/photo01.png" alt="The Practical One" width="160" height="160"></div>
+<div class="wp-persona__photo"><img src="https://web.three.com.hk/plans/global/assets/personas/photo01.png" alt="The Practical One" width="160" height="160"></div>
 <p class="wp-persona__caption">Wants a new phone and a reliable roaming plan in one 36-month contract</p>
 </article>
 <article class="wp-persona">
 <p class="wp-persona__title">The Hassle-Free One</p>
-<div class="wp-persona__photo"><img src="../world-plan/assets/personas/photo02.png" alt="The Hassle-Free One" width="160" height="160"></div>
+<div class="wp-persona__photo"><img src="https://web.three.com.hk/plans/global/assets/personas/photo02.png" alt="The Hassle-Free One" width="160" height="160"></div>
 <p class="wp-persona__caption">Frequent Mainland or short trips — no SIM swap needed</p>
 </article>
 <article class="wp-persona">
 <p class="wp-persona__title">The Spontaneous One</p>
-<div class="wp-persona__photo"><img src="../world-plan/assets/personas/photo03.png" alt="The Spontaneous One" width="160" height="160"></div>
+<div class="wp-persona__photo"><img src="https://web.three.com.hk/plans/global/assets/personas/photo03.png" alt="The Spontaneous One" width="160" height="160"></div>
 <p class="wp-persona__caption">Data always ready for impromptu getaways</p>
 </article>
 <article class="wp-persona">
 <p class="wp-persona__title">Everyday Hong Kong users</p>
-<div class="wp-persona__photo"><img src="../world-plan/assets/personas/photo04.png" alt="Everyday Hong Kong users" width="160" height="160"></div>
+<div class="wp-persona__photo"><img src="https://web.three.com.hk/plans/global/assets/personas/photo04.png" alt="Everyday Hong Kong users" width="160" height="160"></div>
 <p class="wp-persona__caption">Data is never wasted — usable at home too</p>
 </article>
 </div>
@@ -611,7 +1513,7 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <div class="wp-enquiry">
 <a class="wp-enquiry__link" href="https://web.three.com.hk/redirect/wa/3com_worldhsvplan_en.html?cmpid=web_nil_3totalk-hsvworld_260915_nil_en">
 <span class="wp-enquiry__visit">Visit</span>
-<img class="wp-enquiry__icon" src="../world-plan/assets/enquiry/icon-whatsapp.svg" alt="" width="43" height="43" aria-hidden="true">
+<img class="wp-enquiry__icon" src="https://web.three.com.hk/plans/global/assets/enquiry/icon-whatsapp.svg" alt="" width="43" height="43" aria-hidden="true">
 <span class="wp-enquiry__copy"><span class="wp-enquiry__brand">3toTalk</span><span class="wp-enquiry__rest"> Digital Sales Ambassador for enquiries</span></span>
 </a>
 </div>
@@ -621,7 +1523,219 @@ HK$1,500 to HK$20,000 to purchase selected handsets and products</p></article>
 <!-- /#pagewrap -->
 
 <!-- footer -->
-<!--#include virtual="../../../plans/planinc/footer-en.html" -->
+<!-- local-dev: 3HK footer for SSI preview -->
+<style>
+.hkfooterpagewrap { width: 100%;margin: 0 auto;max-width: 1600px;background-color: #f3f3f3;padding: 50px 0 50px; }
+.hkfootersection { max-width: 1400px;margin: 0 auto;padding: 0 15px; }
+.hkfooterupper-container { 
+	display: grid;
+    grid-template-columns: 2fr 0.7fr 0.7fr 0.7fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+.hkfootericon-container {
+	display: flex;
+    gap: 15px;
+	margin-bottom: 1rem; 
+}
+.hkfootericonimg { width: 45px;height: auto;display: inline-block;border-radius: 10px;filter: drop-shadow(0px 0px 2px #0000002b); }
+.hkfooterheader { font-size: 1rem;font-weight: bolder;margin-bottom: 1.25rem !important;line-height: 120% !important;color: inherit;/*margin: 0px !important;*/display: inline-block; }
+.hkfootercat { width: 100%;height: auto;display: inline-block;text-align: left;line-height: 120%; }
+.hkfooterul { list-style: none;padding: 0;display: grid;gap: 1rem; }
+.hkfooterli { color: #000;text-decoration: none;font-size: 1.125rem;font-weight: normal; }
+.hkfooterli:hover { color: #000;text-decoration: underline; }
+.hkfooterbottom-container { 
+	display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+.hkfooterapp-container { 
+	display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+	line-height: 120%;
+}	
+.hkfooterappimgfr { text-align: left; }
+.hkfooterappimg { width: 120px;height: auto;display: inline-block;border-radius: 24px; }
+.hkfooterappimgqr { width: 120px;height: auto;display: inline-block;border-radius: 24px;/*filter: drop-shadow(0px 0px 2px #0000002b);*/ }
+.hkfooterapptxt-container { display: flex;align-items: baseline;flex-wrap: wrap;gap: 10px;margin-bottom: .5rem; }
+.hkfooterapptxt1 { font-weight: bolder;font-size: 1.5rem;line-height: 120%; }
+.hkfooterapptxt2 { font-size: 1.25rem;line-height: 120%; }
+.hkfooterapptxt3 { margin: .2rem 0 0.8rem; }
+.hkfooterapptxt2en { font-size: 1.1rem; }
+.hkfooterapptxt3en { margin: .2rem 0 0.8rem;font-size: 0.8rem; }
+.hkfooterapptxt3mob { display: none; }
+.hkfooterappdl-container { 
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.hkfooterappdl-container { 
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.hkfooterappdl-containermob { 
+    display: none
+}
+.hkfooterappdl { height: 45px;width: auto;display: inline-block; }
+.hkfooternotxt { margin-left: auto;text-align: right;font-size: 0.9rem;line-height: 120%; }
+.hkfooterhr { height: 1px;width: 100%;background: #000;margin: 30px 0 20px; }
+.hkfootertnc-container { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: .875rem;
+	line-height: 120%;
+}
+.hkfootertncul { display: flex;flex-wrap: wrap;gap: 8px 12px;list-style: none;padding: 0;margin: 0; }
+.hkfootertncli { color: #000;text-decoration: none; }
+.hkfootertncli:hover { color: #000;text-decoration: underline; }
+.hkfootertnccenter { font-size: .75rem;/*white-space: nowrap;*/ }
+.hkfootertnclogo { width: auto;height: 29px;display: inline-block;filter: brightness(0); }
+.hkfooternowrap { white-space: nowrap; }
+
+@media screen and (max-width: 1440px) {
+.hkfooterpagewrap { padding: 50px 0 220px; }
+}
+	
+@media screen and (max-width: 480px) {
+.hkfooterpagewrap { width: 100%;padding: 50px 0 150px 0; }
+.hkfooterupper-container { grid-template-columns: 1fr;gap: 2rem;margin-bottom: 2rem; }
+.hkfootericonimg { width: 40px;border-radius: 9px; }
+.hkfooterul { grid-template-columns: 1fr 1fr;column-gap: 12px;row-gap: 12px; }
+.hkfooterappimgqr { display: none; }
+.hkfooterheader { font-size: 1rem;margin-bottom: 1rem !important; }
+.hkfooterli { font-size: 1.125rem; }
+.hkfooterappimg { width: 94px; }
+.hkfooternotxt { margin-left: 0;text-align: left;font-size: 0.8rem;width: 100%; }
+.hkfooterbottom-container { gap: 0.8rem;margin: 0rem 0; }
+.hkfooterapptxt-container { margin-bottom: 0px; }
+.hkfooterappimgfr { width: 65%; }
+.hkfooterapptxt2 { font-size: 1.25rem; }
+.hkfooterapptxt3 { display: none; }
+.hkfooterapptxt2en { font-size: 1rem; }
+.hkfooterapptxt3en { display: none; }
+.hkfooterapptxt3mob { display: block;font-size: 0.8rem;text-align: left; }
+.hkfooterapp-container { gap: 10px; }	
+.hkfooterappdl-container { display: none }
+.hkfooterappdl-containermob { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 6px;
+}
+.hkfooterappdl { height: auto;width: 100%; }
+.hkfooterhr { margin: 20px 0 20px; }
+.hkfootertnc-container { flex-direction: column;text-align: center;font-size: .8rem; }
+	
+}
+
+</style>
+<footer id="site-footer" role="contentinfo" aria-label="Site footer">
+<div class="hkfooterpagewrap body-text">
+<div class="hkfootersection">
+	
+<div class="hkfooterupper-container">
+<div class="hkfootericon-container">
+    <a href="https://www.facebook.com/threeHK/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-facebook.webp" title="Facebook" alt="Facebook" class="hkfootericonimg"></a>
+    <a href="https://www.instagram.com/3hongkong/?ref=badge" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-instagram.webp" title="Instagram" alt="Instagram" class="hkfootericonimg"></a>
+    <a href="https://www.youtube.com/channel/UCU0_tfvHi8k6E3RnusLal4g" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-youtube.webp" title="YouTube" alt="YouTube" class="hkfootericonimg"></a>
+    <a href="https://web.three.com.hk/redirect/wa/3com_homepagefooter_en.html" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-whtsapp.webp" title="WhatsApp" alt="WhatsApp" class="hkfootericonimg"></a>
+    <a href="https://weixin.qq.com/r/sDhbQ2DEMT1OrSQg922i" target="_blank" rel="noopener noreferrer" aria-label="Open WeChat in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-wechat.webp" title="WeChat" alt="WeChat" class="hkfootericonimg"></a>
+    <a href="https://www.linkedin.com/company/3-hong-kong-hutchison-telephone-company-limited/" target="_blank" rel="noopener noreferrer" aria-label="Open Linkedin in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/icon-linkedin.webp" title="Linkedin" alt="Linkedin" class="hkfootericonimg"></a>
+</div>
+	
+<div class="hkfootercat" role="navigation" aria-label="About Us">
+<h5 class="hkfooterheader">About Us</h5>
+<ul class="hkfooterul">
+<li><a href="https://web.three.com.hk/about3hk/about/index-en.html" class="hkfooterli">About Us</a></li>
+<li><a href="https://web.three.com.hk/AI+5G/index-en.html" class="hkfooterli">AI Updates</a></li>
+<li><a href="https://web.three.com.hk/about3hk/notices/index-en.html" class="hkfooterli">Important Notices</a></li>
+<li><a href="https://web.three.com.hk/about3hk/enq/index-en.html" class="hkfooterli">Media Enquiries</a></li>
+<li><a href="https://web.three.com.hk/about3hk/contactus/index-en.html" class="hkfooterli">Contact Us</a></li>
+</ul>
+</div>	
+
+<div class="hkfootercat" role="navigation" aria-label="Contact Us">
+<h5 class="hkfooterheader">Contact Us</h5>
+<ul class="hkfooterul">
+<li><a href="https://www.three.com.hk/3Care/eng/contactus/Contactus.jsp" target="_blank" class="hkfooterli">3Service Hotline: 1033</a></li>
+<li><a href="https://web.three.com.hk/redirect/wa/3com_homepagefooter_en.html" target="_blank" class="hkfooterli">3toTalk Digital Sales Ambassador</a></li>
+<li><a href="https://www.three.com.hk/3Care/eng/contactus/Contactus.jsp" target="_blank" class="hkfooterli">Email Us</a></li>
+<li><a href="https://www.three.com.hk/3Care/chat.jsp?lang=eng" target="_blank" class="hkfooterli">3iChat Online Support</a></li>
+</ul>
+</div>	
+
+<div class="hkfootercat" role="navigation" aria-label="Quick Links">
+<h5 class="hkfooterheader">Quick Links</h5>
+<ul class="hkfooterul">
+<li><a href="https://www.three.com.hk/login/eng" class="hkfooterli">My Account</a></li>
+<li><a href="https://www.three.com.hk/3Care/eng/info/InfoMap.jsp?lang=eng" target="_blank" class="hkfooterli">3Shop</a></li>
+<li><a href="https://web.three.com.hk/3business/index-en.html" target="_blank" class="hkfooterli">3Business</a></li>
+<li><a href="https://web.three.com.hk/my3/index-en.html" target="_blank" class="hkfooterli">My3 App</a></li>
+<li><a href="https://web.three.com.hk/antiscam2023/home/index-en.html" class="hkfooterli">Anti-fraud Information</a></li>
+</ul>
+</div>
+
+</div>
+	
+<div class="hkfooterbottom-container">
+	
+<div class="hkfooterapp-container">
+    <a href="https://web.three.com.hk/my3/index-en.html" target="_blank" rel="noopener noreferrer" aria-label="Open My3 App page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/my3app-newlogo.webp" title="Download My3" alt="Download My3" class="hkfooterappimg"></a>
+    <img src="https://web.three.com.hk/3hongkongfooter/images/qrcode-my3-en.svg" title="My3 App QRCode" alt="My3 App QRCode" class="hkfooterappimgqr" aria-hidden="true">
+<div class="hkfooterappimgfr">
+<div class="hkfooterapptxt-container"><span class="hkfooterapptxt1">My3 App</span><span class="hkfooterapptxt2en">Enjoy online subscription offer with upgraded My3 App</span></div>
+<div class="hkfooterapptxt3en">Download the app through official channels only to reduce the risk of your mobile device being hacked.</div>
+<div class="hkfooterappdl-container">
+    <a href="https://apps.apple.com/hk/app/my3/id926630813?l=en" target="_blank" rel="noopener noreferrer" aria-label="Open App Store download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-apple-en.svg" title="App Store" alt="App Store" class="hkfooterappdl"></a>
+    <a href="https://play.google.com/store/apps/details?id=hk.com.three.my3plus&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Open Google Play download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-google-en.svg" title="Google Play" alt="Google Play" class="hkfooterappdl"></a>
+    <a href="https://appgallery.cloud.huawei.com/marketshare/app/C101018157?locale=en&source=appshare&subsource=C101018157" target="_blank" rel="noopener noreferrer" aria-label="Open App Gallery download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-huawei-en.svg" title="App Gallery" alt="App Gallery" class="hkfooterappdl"></a>
+</div>
+</div>
+	
+<div class="hkfooterapptxt3mob">Download the app through official channels only to reduce the risk of your mobile device being hacked.</div>
+<div class="hkfooterappdl-containermob">
+    <a href="https://apps.apple.com/hk/app/my3/id926630813?l=en" target="_blank" rel="noopener noreferrer" aria-label="Open App Store download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-apple-en.svg" title="App Store" alt="App Store" class="hkfooterappdl"></a>
+    <a href="https://play.google.com/store/apps/details?id=hk.com.three.my3plus&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Open Google Play download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-google-en.svg" title="Google Play" alt="Google Play" class="hkfooterappdl"></a>
+    <a href="https://appgallery.cloud.huawei.com/marketshare/app/C101018157?locale=en&source=appshare&subsource=C101018157" target="_blank" rel="noopener noreferrer" aria-label="Open App Gallery download page in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/dl-huawei-en.svg" title="App Gallery" alt="App Gallery" class="hkfooterappdl"></a>
+</div>
+</div>
+	
+<div class="hkfooternotxt">DPMS Category A Registrant (Registration No. A-B-24-07-07851)&nbsp;</div>	
+</div>
+	
+<div class="hkfooterhr"></div>	
+
+<div class="hkfootertnc-container">
+<ul class="hkfootertncul">
+<li><a href="https://web.three.com.hk/terms/is/index-en.html" target="_blank" class="hkfootertncli">Terms & Conditions</a></li>
+<li class="hkfootertnclia" aria-hidden="true">|</li>
+<li><a href="https://web.three.com.hk/terms/privacypolicy/index-en.html" target="_blank" class="hkfootertncli">Privacy Policy</a></li>
+<li class="hkfootertnclia" aria-hidden="true">|</li>
+<li><a href="https://web.three.com.hk/terms/wdncn/index-en.html" target="_blank" class="hkfootertncli">Disclaimer</a></li>
+</ul>
+<div class="hkfootertnccenter">© 3 Hong Kong | In partnership with Vodafone and Conexus</div>
+<a href="https://www.ckh.com.hk/en/global/home.php" target="_blank" rel="noopener noreferrer" aria-label="Open CK Hutchison Holdings website in a new window"><img src="https://web.three.com.hk/3hongkongfooter/images/ckhhlogo-en.webp" title="CK Hutchison Holdings Limited" alt="CK Hutchison Holdings Limited" class="hkfootertnclogo"></a>
+</div>	
+
+</div>
+</div>
+</footer>
+
+	
+
+<!-- local-dev stub: production footer tracking scripts are not loaded locally -->
+	
+
 <!-- footer -->
 
 <script>
