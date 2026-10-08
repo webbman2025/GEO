@@ -1,9 +1,9 @@
 {
   "version": 2,
   "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/simstd", "destination": "/iphone18pro/simstd-en-live-vs-aplus-compare.html" },
-    { "source": "/hsvworld", "destination": "/hsvworld/index-en-live-vs-aplus-compare.html" }
+  "redirects": [
+    { "source": "/simstd", "destination": "/iphone18pro/simstd-en-live-vs-aplus-compare.html", "permanent": false },
+    { "source": "/hsvworld", "destination": "/hsvworld/index-en-live-vs-aplus-compare.html", "permanent": false }
   ],
   "headers": [
     {
